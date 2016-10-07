@@ -1,3 +1,13 @@
 //=include lib/jquery.js
 //=include lib/slick.min.js
+//=include lib/slick.min.js
+//=include lib/semantic.min.js
+//=include lib/search.min.js
+//=include lib/rating.min.js
+//=include lib/dropdown.min.js
+//=include lib/typed.js
+//=include jquery.validete.min.js
+//=include header.js
+//=include lib/scroll.js
+//=include jquery.maskedinput.js
 //=include common.js

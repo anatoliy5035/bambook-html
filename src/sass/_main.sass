@@ -1,1 +1,881 @@
-// Normally mainpage styles
+//header
+
+
+header.header
+  background-image: url(../img/main-header.jpg)
+  +cover
+  +clr
+  min-height: 480px
+
+.header-top.fixed
+  position: fixed
+  background-color: transparent
+  left: 0
+  right: 0
+  top: 0
+  z-index: 500
+
+.header-top
+  padding: 30px 0
+  +tr(all .3s)
+
+  &.scrolling
+    padding: 8px 0
+    background-color: rgba(22, 23, 24, 0.76)
+    box-shadow: 0 0.313rem 0.625rem rgba($title, 0.15)
+
+.menu-open
+  overflow: hidden
+  .header-menu
+    display: block
+
+
+.header-menu
+  position: fixed
+  left: 0
+  width: 100%
+  z-index: 9991
+  display: none
+  bottom: 0
+  background: $bg
+  overflow-y: auto
+  overflow-x: hidden
+
+
+.icon-button-burger
+  margin-right: 15px
+
+.header-cat
+  display: inline-block
+  vertical-align: middle
+  border: 1px solid $main
+  color: #fff
+  +fs(14)
+  font-weight: 300
+  text-transform: uppercase
+  padding: 6px 30px 9px 0
+  padding-left: 15px
+  span
+    vertical-align: middle
+
+.header-logo
+  display: inline-block
+  vertical-align: middle
+  margin-right: 20px
+  a
+    display: block
+
+
+.header__left-block
+  float: left
+
+.header__right-block
+  float: right
+  margin-top: 6px
+.header__menu
+  display: inline-block
+  padding-right: 39px
+  border-right: 1px solid $main
+  li
+    display: inline-block
+    vertical-align: middle
+    margin-right: 30px
+    &:last-child
+      margin-right: 0
+    a
+      color: #fff
+      +fs(14)
+      font-weight: 700
+      line-height: 25px
+      text-transform: uppercase
+
+.header__signup-panel
+  display: inline-block
+  vertical-align: middle
+  margin-left: 20px
+  li
+    display: inline-block
+    vertical-align: middle
+    margin-right: 30px
+
+  a
+    color: #c9c9c9
+    font-size: 14px
+    font-weight: 700
+    line-height: 48px
+    text-transform: uppercase
+
+.basket
+  width: 40px
+  height: 40px
+  border: 1px solid $main
+  border-radius: 20px
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  +tr(all .2s)
+  &.is-active, &:hover
+    background-color: $main
+    .icon
+      color: white
+
+  .icon
+    +vcenter
+    color: $main
+    font-size: 22px
+
+.basket-num
+  width: 20px
+  top: -6px
+  right: -50%
+  height: 20px
+  border-radius: 50%
+  display: inline-block
+  background-color: #d24462
+  position: relative
+  span
+    color: white
+    display: inline-block
+    +vcenter
+    z-index: 50
+
+.header__search
+  .h2
+    color: white
+    text-align: center
+    font-weight: 300
+    margin-bottom: 32px
+
+.header__search
+  padding-top: 180px
+
+.search-block
+  max-width: 730px
+  margin: 0 auto
+  position: relative
+  input
+    padding: 20px 150px 20px 37px
+    width: 100%
+    position: relative
+    +fs(24)
+    border-radius: 33px
+    box-shadow: 0 1px 4px rgba($title, 0.25)
+    font-weight: 300
+    font-family: 'Open Sans'
+    color: #c8c9c9
+    +fs(24)
+    &::placeholder
+      color: #c8c9c9
+      font-weight: 300 !important
+      +fs(24)
+      font-family: 'Open Sans'
+
+
+.button.search
+  position: absolute
+  right: 10px
+  top: 10px
+  bottom: 10px
+
+.ui.star.rating .active.icon
+  text-shadow: none !important
+
+.book-slide
+  +clr()
+  padding: 70px 0
+  padding-bottom: 0
+
+
+.book-slider__left-block
+  max-width: 510px
+  float: left
+  p
+    color: #6c6969
+    font-size: 16px
+    font-weight: 300
+    line-height: 30px
+
+.left-block-footer__more
+  color: $title
+  +fs(18)
+  font-weight: 400
+  &:after
+    content: ''
+    +arr(10,6, #333333, b)
+    +rotate(-90)
+    display: inline-block
+    vertical-align: middle
+    margin-left: 5px
+
+.left-block-footer
+  margin-top: 54px
+
+.left-block-footer__more
+  margin-left: 36px
+
+.autror
+  color: $text
+  font-size: 1.125rem
+  font-weight: 400
+  margin-bottom: 21px
+
+
+.ui.star.rating .active.icon
+  color: #efce4a !important
+
+.stars
+  margin-bottom: 29px
+
+.book-slider__right-block
+  float: right
+  transform: translate(0, -113px)
+
+.book-slider-container
+  .slick-list
+    overflow: visible
+  .container
+    transform: translate(0, -113px)
+    background-color: #f0f2f2
+    padding: 70px 100px
+    border-radius: 0.25rem
+    padding-bottom: 0
+    box-shadow: 0 0.063rem 0.25rem rgba($title, 0.25)
+
+
+.slick-prev:before,
+.slick-next:before
+  color: transparent
+  height: 43px
+
+
+.slick-prev
+  left: 23px
+  height: 43px
+  width: 18px
+  top: 213px
+
+
+.slick-next
+  right: 23px
+  height: 43px
+  width: 18px
+  top: 213px
+
+.menu-picture-item
+  height: 100px
+  text-align: center
+  border-radius: 4px
+  display: block
+  margin-bottom: 30px
+  background-color: black
+  position: relative
+  overflow: hidden
+  background-size: 370px 100px
+  background-position: 50% 50%
+  +tr(all .3s)
+  +vertical
+
+  &:hover
+    .menu-picture__title
+      color: $main
+    background-size: 401px 106px
+    background-position: center center
+
+
+.nav
+  &-1
+    background-image: url('../img/nav-1.png')
+
+  &-2
+    background-image: url('../img/nav-2.png')
+
+  &-3
+    background-image: url('../img/nav-3.png')
+
+  &-4
+    background-image: url('../img/nav-4.png')
+
+  &-5
+    background-image: url('../img/nav-5.png')
+
+  &-6
+    background-image: url('../img/nav-6.png')
+
+
+.menu-picture__title
+  display: inline-block
+  vertical-align: middle
+  color: #fff
+  font-size: 1.125rem
+  font-weight: 700
+  text-transform: uppercase
+
+.button-new
+  background-color: #be2747
+  border-radius: 0.938rem
+  color: #fff
+  font-size: 0.75rem
+  padding: 10px 17px
+  position: absolute
+  z-index: 10
+  transform: translate(0, -50%)
+  right: 0
+
+.manu-picture-container
+  margin-bottom: 80px
+
+.popular-item
+  position: relative
+  height: 180px
+  margin-bottom: 80px
+  +vertical
+
+  .text-wrap
+    padding-left: 161px
+    vertical-align: middle
+    display: inline-block
+
+  .h3
+    color: $title
+    font-size: 1rem
+    font-weight: 700
+    line-height: 20px
+    text-transform: uppercase
+    padding-bottom: 15px
+
+.popular-item__author
+  color: $author-book
+  font-size: 0.875rem
+  font-weight: 700
+  line-height: 24px
+  padding-bottom: 26px
+
+.popular-item__price
+  color: $title
+  font-size: 1.5rem
+  font-weight: 400
+  line-height: 24px
+
+.popular-item__pic
+  position: absolute
+  left: 0
+  top: 0
+  img
+    box-shadow: 0 0.313rem 1.375rem rgba(26, 35, 42, 0.45)
+
+.popular-books
+  background-color: #f0f2f2
+  padding-top: 70px
+  padding-bottom: 60px
+  .h2
+    padding-bottom: 70px
+
+  .slick-prev
+    right: -30px
+
+  .slick-prev
+    left: -30px
+
+.hit, .new
+  width: 3.438rem
+  height: 1.563rem
+  background-color: #f55423
+  border-radius: 0.938rem 0.938rem 0 0
+  text-align: center
+  margin: 0 auto
+  position: absolute
+  top: -25px
+  left: 50%
+  transform: translate(-50%, 0)
+  span
+    font-weight: 700
+    line-height: 30px
+    text-transform: uppercase
+    font-size: 0.75rem
+    color: white
+
+.new
+  background-color: #2377f5 !important
+
+.more-but
+  color: $title
+  margin: 0 auto
+  display: inline-block
+
+.more-wrap
+  text-align: center
+  margin-top: 60px
+
+.popular__slider
+  .slide
+    margin: 0 25px
+
+.slick-prev:before, .slick-next:before
+  background-color: transparent !important
+
+.slick-prev
+  &:before
+    background-image: url(../img/arrow-l.svg)
+    background-color: transparent !important
+    background-repeat: no-repeat
+.slick-next
+  &:before
+    background-image: url(../img/arrow-r.svg)
+    background-color: transparent !important
+    background-repeat: no-repeat
+
+.header-review
+  background-color: #f0f2f2
+  height: 80px
+  .h3
+    color: $title
+    font-size: 1rem
+    font-weight: 700
+    line-height: 18px
+    margin-top: 8px
+    display: inline-block
+
+.header-review__left
+  float: left
+  margin-right: 20px
+  img
+    display: block
+    border-radius: 50%
+
+.review-item
+  box-shadow: 0px 0px 3px 2px #ececec
+  border-radius: 0 0 0.25rem 0.25rem
+  //height: 310px
+  +clr
+
+.header-review
+  border-radius: 0.25rem 0.25rem 0 0
+  padding: 16px
+  +clr()
+.body-review
+  .text
+    font-size: 0.875rem
+    //font-weight: 300
+    line-height: 24px
+
+.review-question
+  color: #9d9d9d
+  font-size: 0.875rem
+  font-style: italic
+  line-height: 24px
+  vertical-align: middle
+  display: inline-block
+
+.vote-but
+  color: #b3b3b3
+  font-size: 0.875rem
+  font-weight: 400
+  background-color: transparent
+  &:hover
+    .icon
+      transform: translateY(-3px)
+
+  .icon
+    font-size: 15px
+    +tr(all .2s)
+.icon-yes
+  color: $main
+  margin-right: 5px
+
+.icon-no
+  color: #dd5151
+  margin-right: 5px
+
+.body-review
+  padding: 20px
+
+.footer-review
+  height: 56px
+  padding: 0 20px
+  position: relative
+  +vertical
+  border-top: 1px solid #ececec
+
+.vote__yes
+  margin-right: 20px
+
+.vote
+  +vcenter
+  right: 20px
+  left: auto
+  height: 20px
+  transform: translate(0, -50%)
+
+.reviews
+  padding: 80px 0
+  .h2
+    padding-bottom: 80px
+
+.scrollbar
+  width: 100%
+  height: 10px
+  margin-top: 20px
+
+
+.registration-block
+  padding: 80px 0
+  text-align: center
+  background-image: url('../img/register-bg.jpg')
+  +cover
+
+
+.registration-block__title
+  color: white
+  font-size: 2.25rem
+  font-weight: 400
+  line-height: 48px
+  padding-bottom: 40px
+
+
+.registration-block__text
+  color: white
+  font-size: 1rem
+  font-weight: 300
+  line-height: 24px
+  padding-bottom: 40px
+
+.registration-block__info
+  max-width: 864px
+  margin: 0 auto
+
+.iformation-section
+  padding: 77px 0 81px 0
+
+.overviews
+  .h2
+    text-align: left
+
+.ui.dropdown
+  +tr(all .1s)
+  position: static
+
+.show-select-container
+  position: relative
+  display: inline-block
+  vertical-align: middle
+
+.transition
+  transition-duration: .1s !important
+
+.show-select
+  border: 0.063rem solid #c4c4c4
+  border-radius: 50px
+  padding: 10px 39px 10px 20px
+  min-width: 176px
+
+  .menu
+    width: 100%
+
+.dropdown-icon
+  background-image: url('../img/drop.svg')
+  background-repeat: no-repeat
+  width: 7px
+  height: 7px
+  display: inline-block
+  position: absolute
+  top: 25px
+  right: 20px
+  margin-top: -7px
+  font-style: normal
+  font-weight: 400
+  font-size: 14px
+  line-height: 1
+
+.ui.dropdown .menu
+  border-radius: 0 0 10px 10px !important
+  border-color: #c4c4c4
+  border-top: 0
+
+
+.show-select.visible
+  border-radius: 10px 10px 0 0
+  //border-bottom: 0
+
+.menu .item
+  font-size: 14px !important
+  font-size: 0.875rem !important
+  color: #6c6969 !important
+
+.show-select.visible.upward
+  border-top: 0
+  border-radius: 0 0 10px 10px  !important
+
+.show-select.visible.upward .menu
+  border-radius: 10px 10px 0 0  !important
+
+
+.overviews-header-right, .default.text
+  color: $title !important
+  font-family: "Open Sans"
+  font-size: 0.875rem
+  font-weight: 300
+  line-height: 24px
+  
+.overviews-header-right
+  float: right
+
+  span
+    display: inline-block
+    vertical-align: middle
+    margin-right: 15px
+
+.overviews__header
+  +clr
+  margin-bottom: 66px
+  .h2
+    float: left
+    display: inline-block
+
+.overview-item
+  width: 100%
+  background-color: #f0f2f2
+  border-radius: 0.25rem
+  box-shadow: 0 0.063rem 0.25rem rgba($title, 0.25)
+  position: relative
+  padding: 29px 36px 42px 36px
+  margin-bottom: 66px
+
+.overview-item__right-block
+  position: absolute
+  top: 30px
+  left: 30px
+  transform: translateY(-50px)
+  .name
+    text-align: center
+    padding-top: 30px
+    .author
+      color: #848484
+      font-size: 0.875rem
+      font-weight: 400
+
+    .name-book
+      color: $title
+      font-size: 1.125rem
+      font-weight: 700
+      text-transform: uppercase
+      margin-bottom: 10px
+
+.overview-item__left-block
+  padding-left:  160px
+
+.overview-item-picture img
+  box-shadow: 0 0.313rem 1.375rem rgba(26, 35, 42, 0.45)
+
+.overview-item__user
+  .stars
+    margin-bottom: 20px !important
+    margin-top: 10px
+  .user-nane
+    display: inline-block
+    vertical-align: middle
+    color: $title
+    font-size: 1rem
+    font-weight: 700
+    line-height: 18px
+
+  img
+    border-radius: 50%
+    width: 29px
+    height: 29px
+    display: inline-block
+    margin-right: 11px
+    vertical-align: middle
+
+.overviews__footer
+  +justify
+  *
+    display: inline-block
+    vertical-align: middle
+
+.reg-warning
+  color: $title
+  font-size: 0.875rem
+  font-weight: 300
+  line-height: 24px
+
+.left-sidebar
+  .h2
+    padding-bottom: 80px
+    text-align: left
+
+.news__anouns
+  margin-bottom: 20px
+  padding-bottom: 26px
+  border-bottom: 1px solid  #d5d5d5
+  .time
+    color: #a3a3a3
+    font-size: 0.875rem
+    font-weight: 400
+    line-height: 18px
+    margin-bottom: 20px
+    display: block
+  .h3
+    padding-bottom: 20px
+    color: $title
+    font-size: 1rem
+    font-weight: 700
+    line-height: 18px
+    text-transform: uppercase
+
+.announce-text
+  p
+    color: #464646
+    font-size: 0.875rem
+    font-weight: 300
+    line-height: 24px
+
+.left-sidebar
+  .tr-button
+    margin-top: 40px
+
+.advances
+  background-color: $bg
+  padding: 50px 0
+  border-bottom: 1px solid #d5d5d5
+  box-shadow: inset 0.094rem 0.163rem 0.625rem rgba(0, 0, 0, 0.05)
+
+.avances__wrap
+  display: flex
+  justify-content: space-between
+
+.adv-item-pic
+  width: 100px
+  height: 100px
+  border-radius: 50%
+  border: 0.063rem solid #898989
+  margin: 0 auto
+  position: relative
+  .icon
+    color: $main
+    font-size: 45px
+    +vcenter
+
+
+.adv-item-text
+  color: $title
+  font-size: 0.875rem
+  font-weight: 300
+  line-height: 24px
+  text-align: center
+  margin-top: 30px
+
+.adv-item
+  //max-width: 144px
+  
+.footer
+  padding: 80px 0
+  background-color: $bg
+
+.footer__logo
+  float: left
+
+.social
+  float: right
+
+.copyright
+  margin: 0 40% 0 20%
+  max-width: 390px
+  color: #464646
+  font-family: "Open Sans"
+  font-size: 0.875rem
+  font-weight: 300
+  line-height: 24px
+
+.fb
+  path
+    fill: #3b5998
+
+.gp
+  path
+    fill: #dc4e41
+
+.vk
+  path
+    fill: #4d76a1
+
+.tw
+  path
+    fill: #55acee
+    
+    
+.footer-social-child
+  float: left
+  margin: 0 5px
+  svg
+    width: 30px
+    height: 30px
+
+.footer-social-list
+  +clr
+
+.right-banner
+  +clr()
+  img
+    float: right
+    display: block
+  a
+    display: block
+
+.soc-title
+  color: #464646
+  font-size: 0.875rem
+  font-weight: 300
+  margin-bottom: 15px
+  line-height: 24px
+
+.catalog-menu__list
+  li
+    margin-bottom: 15px
+  a
+    color: $title
+    font-size: 0.875rem
+    font-weight: 400
+    &:hover
+      text-decoration: underline
+
+.catalog-menu__top
+  padding: 40px 0
+  border-bottom: 1px solid #d5d5d5
+
+.reccomends-container
+  display: flex
+  justify-content: space-between
+
+
+.reccomends-picture
+  img
+    margin-bottom: 17px
+    box-shadow: 0 0.313rem 1.375rem rgba(26, 35, 42, 0.45)
+
+
+.reccomends-text
+  .name
+    font-size: 0.875rem
+    font-weight: 600
+    color: $title
+    line-height: 20px
+    margin-bottom: 13px
+  .price
+    color: #8b8b8b
+    line-height: 24px
+    font-size: 1.25rem
+
+
+.reccomends__item
+  max-width: 130px
+
+.reccomends
+  padding: 40px 0
+  .reccomends__title
+    padding-bottom: 35px
+
+
+.slick-arrow
+  +tr(all .3s)
+  &:hover
+    opacity: 0.5
