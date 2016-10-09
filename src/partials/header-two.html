@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header heaader--second">
     <div class="header-top">
         <div class="container">
             <div class="header__left-block">
@@ -12,6 +12,11 @@
                     <span>Каталог</span>
                     //=include catalog-menu.html
                 </div>
+                <div class="search">
+                    <a href="#">
+                        <i class="icon icon-search"></i>
+                    </a>
+                </div>
             </div>
             <div class="header__right-block">
                 <nav class="header__menu">
@@ -23,8 +28,14 @@
                 </nav>
                 <div class="header__signup-panel">
                     <ul>
-                        <li><a class="sign" href="#">Вход</a></li>
-                        <li><a class="reg" href="#">Регистрация</a></li>
+                        <li>
+                            <a class="sign__user-name" href="#">Катерина</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img class="sign__user-image" src="../img/rewiev-1.jpg" alt="">
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="basket is-active">
@@ -36,13 +47,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="header__search">
-        <h2 class="h2">Какую книгу вы ищите?</h2>
-        <div class="search-block">
-            <input class="prompt" type="text" placeholder="">
-            <button class="search-input button">Найти</button>
         </div>
     </div>
 </header>

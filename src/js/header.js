@@ -13,11 +13,12 @@ var Header = {
 
     showMenu: function() {
         jQuery('body').addClass('menu-open');
-        jQuery('.header-nav .navicon-close').attr('id', 'js-close-menu');
+        // jQuery('.header-nav .navicon-close').attr('id', 'js-close-menu');
     },
 
     hideMenu: function() {
         jQuery('body').removeClass('menu-open');
+        // $('#js-open-menu').off('mouseover');
     },
 
     events: function() {
@@ -30,11 +31,24 @@ var Header = {
             event.preventDefault();
             Header.showMenu();
             setMenuHeight();
+             $(this).addClass('is-active');
 
-        });
+        }).mouseout(function(e){
+            var $this = $(this);
+
+            var left = $this.offset().left + $this.outerWidth();
+            var right = $this.offset().right + $this.outerWidth();
+
+            if(e.pageX <= right || e.pageX >= left) {
+                Header.hideMenu();
+                $('#js-open-menu').removeClass('is-active');
+            }
+        })
+
         jQuery('.header-menu').mouseleave(function(event) {
             Header.hideMenu();
-        })
+            $('#js-open-menu').removeClass('is-active');
+        });
 
 
 

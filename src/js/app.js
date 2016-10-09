@@ -8,6 +8,7 @@
 //=include lib/typed.js
 //=include jquery.validete.min.js
 //=include header.js
+//=include counter.js
 //=include lib/scroll.js
 //=include jquery.maskedinput.js
 //=include common.js

@@ -30,16 +30,22 @@
 
 html
 	font-size: 16px
+	height: 100%
 
 body
 	font-family: "Open Sans"
 	font-size: 12px
 	line-height: 1.4
+	position: relative
+	margin: 0
+	//padding-bottom: 6rem
+	min-height: 100%
 $main: #27be6e
 $text: #6c6969
 $author-book: #949494
 $title: #333
 $bg: #f0f2f2
+$grey: #d5d5d5
 
 .h1
 	color: $title
@@ -87,7 +93,7 @@ a
 	font-weight: 700
 	display: inline-block
 	+tr(all .2s)
-	&:hover
+	&:hover, &.is-active
 		background-color: #14cf6c
 		box-shadow: 0px 3px 22px 0px rgba(10, 214, 106, 0.42)
 
@@ -98,12 +104,15 @@ a
 	text-transform: uppercase
 	border: 0.063rem solid $main
 	+tr(all .2s)
-	&:hover
+	&:hover, &.is-active
 		background-color: $main
 		color: white
+		border-color: transparent
 
 .wrapper
 	overflow: hidden
+	position: relative
+	padding-bottom: 233px
 
 *
 	-webkit-box-sizing: border-box
@@ -116,5 +125,7 @@ a
 	border: 1px solid #c4c4c4 !important
 	text-transform: none !important
 	font-size: 0.875rem
+
+
 	
 

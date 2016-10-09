@@ -50,8 +50,9 @@ $(document).ready(function() {
 
     //slick
     $('.book-slider').slick();
-    $('.popular__slider').slick();
-    getslideOffset();
+    $('.popular__slider').slick({
+        dots: true
+    });
 
     //scroll slider
     (function () {
@@ -82,7 +83,8 @@ $(document).ready(function() {
 
     }());
 
-})
+});
+
 
 //dropdown
 $('.ui.dropdown').dropdown();
@@ -107,13 +109,20 @@ $(window).scroll(function(){
 //header init
 Header.init();
 setMenuHeight();
+//counter
+$(function() {
+    $('.counter').counter();
+});
+// getslideOffset();
 
-function getslideOffset() {
-    var elOffset = $('.book-slider .container')[0].offsetLeft;
-    $('.book-slider .slick-prev').css('left', elOffset+20 + 'px');
-    $('.book-slider .slick-next').css('right', elOffset+20 + 'px');
-}
+// function getslideOffset() {
+//     var elOffset = $('.book-slider .container')[0].offsetLeft;
+//     $('.book-slider .slick-prev').css('left', elOffset+20 + 'px');
+//     $('.book-slider .slick-next').css('right', elOffset+20 + 'px');
+// }
+//
+// $(window).resize(getslideOffset);
 
-$(window).resize(getslideOffset);
+
 
 
