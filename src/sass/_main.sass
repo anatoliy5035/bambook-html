@@ -344,7 +344,9 @@ header.header
 .manu-picture-container
   margin-bottom: 80px
 
-.popular-item, .order
+.popular-item,
+.order,
+.interest
   position: relative
   height: 180px
   margin-bottom: 80px
@@ -363,20 +365,27 @@ header.header
     text-transform: uppercase
     padding-bottom: 15px
 
-.popular-item__author, .order-item__author
+.popular-item__author,
+.order-item__author,
+.interest-item__author
   color: $author-book
   font-size: 0.875rem
   font-weight: 700
   line-height: 24px
   padding-bottom: 26px
 
-.popular-item__price, .order__price
+.popular-item__price,
+.order__price,
+.interest__price,
+.price
   color: $title
   font-size: 1.5rem
   font-weight: 400
   line-height: 24px
 
-.popular-item__pic, .order-item__pic
+.popular-item__pic,
+.order-item__pic,
+.interest-item__pic
   position: absolute
   left: 0
   top: 0
@@ -396,7 +405,7 @@ header.header
   .slick-prev
     left: -30px
 
-.hit, .new
+.hit, .new, .discount
   width: 3.438rem
   height: 1.563rem
   background-color: #f55423
@@ -416,6 +425,9 @@ header.header
 
 .new
   background-color: #2377f5 !important
+
+.discount
+  background-color: #80c140 !important
 
 .more-but
   color: $title
@@ -464,12 +476,11 @@ header.header
 
 .review-item
   box-shadow: 0px 0px 3px 2px #ececec
-  border-radius: 0 0 0.25rem 0.25rem
+  border-radius: 0.25rem
   //height: 310px
   +clr
 
 .header-review
-  border-radius: 0.25rem 0.25rem 0 0
   padding: 16px
   +clr()
 .body-review
@@ -768,7 +779,7 @@ header.header
   width: 100px
   height: 100px
   border-radius: 50%
-  border: 0.063rem solid #898989
+  border: 0.063rem solid $grey
   margin: 0 auto
   position: relative
   .icon
@@ -846,6 +857,9 @@ header.header
   a
     display: block
 
+.catalog
+  border-bottom: 1px solid $grey
+
 .soc-title
   color: #464646
   font-size: 0.875rem
@@ -871,13 +885,15 @@ header.header
   border-bottom: 1px solid #d5d5d5
 
 .reccomends-container
-  display: flex
-  justify-content: space-between
+  //+justify
 
 
 .reccomends-picture
   img
     margin-bottom: 17px
+    margin: 0 auto
+    height: 184px
+    width: 100%
     box-shadow: 0 0.313rem 1.375rem rgba(26, 35, 42, 0.45)
 
 
@@ -888,20 +904,39 @@ header.header
     color: $title
     line-height: 20px
     margin-bottom: 13px
+    text-align: left
   .price
     color: #8b8b8b
     line-height: 24px
     font-size: 1.25rem
 
 
-.reccomends__item
+.reccomends__item,
+.news__item,
+.popular__item
   max-width: 130px
+  display: inline-block
 
-.reccomends
+.reccomends, popular
   padding: 40px 0
   .reccomends__title
     padding-bottom: 35px
 
+.news__item,
+.popular__item
+  display: inline-block
+  padding: 0 30px
+  box-sizing: content-box
+  margin-bottom: 70px
+  height: 256px
+  vertical-align: top
+  .reccomends-picture
+    margin-bottom: 15px
+    position: relative
+
+.news-container,
+.popular-container
+  margin: 0 -20px
 
 .slick-arrow
   +tr(all .3s)
@@ -1021,10 +1056,10 @@ header.header
     padding-bottom: 34px
 
 
-.order-section
+.main-offset
   padding-top: 80px
-
   box-shadow: inset 0.094rem 0.163rem 0.625rem rgba(0, 0, 0, 0.05)
+
 .order-section .container
   padding-bottom: 40px
 
@@ -1150,3 +1185,479 @@ input[type="checkbox"]:checked:before
   color: $main
   line-height: 11px
 
+
+.menu-catalog
+  padding-bottom: 80px
+  li
+    margin-bottom: 20px
+    //display: inline-block
+
+  a
+    color: #3c404a
+    font-size: 0.875rem
+    font-weight: 400
+    display: inline-block
+    position: relative
+
+.catalog__inside
+  padding-top: 40px
+  padding-left: 20px
+  padding-right: 20px
+
+.col-title
+  padding-bottom: 43px
+  text-align: left
+
+.couneter-catalog
+  min-width: 28px
+  height: 28px
+  display: inline-block
+  position: absolute
+  top: -5px
+  right: -44px
+  border-radius: 50%
+  background-color: #d0d4d4
+  +vertical
+  text-align: center
+
+  span
+    color: #595f65
+    font-size: 0.688rem
+    font-weight: 700
+    display: inline-block
+    vertical-align: middle
+    z-index: 20
+    line-height: 20px
+
+.aside-left-menu, .accordion-criteries
+  margin-bottom: 44px
+
+
+
+  li
+    position: relative
+  a
+    color: #3c404a
+    font-size: 0.875rem
+    font-weight: 700
+    text-transform: uppercase
+    display: inline-block
+    position: relative
+    margin-bottom: 17px
+
+.aside-left-menu__counter
+  min-width: 36px
+  height: 28px
+  display: inline-block
+  position: absolute
+  right: 44px
+  border-radius: 45%
+  background-color: #d0d4d4
+  top: 50%
+  transform: translateY(-50%)
+
+  span
+    color: #595f65
+    font-size: 0.688rem
+    font-weight: 700
+    +vcenter
+    z-index: 20
+
+.aside-left-menu
+  position: relative
+  &:before
+    position: absolute
+    content: ''
+    left: 0
+    right: 0
+    bottom: 0
+    height: 1px
+    background-color: $grey
+
+.accordion-criteries
+  .accordion__item
+    display: none
+
+  .anchor-title
+    position: relative
+    color: #3c404a
+    text-transform: uppercase
+    font-size: 0.875rem
+    font-weight: 700
+    margin-bottom: 17px
+    cursor: pointer
+
+    &:before
+      content: ''
+      display: inline-block
+      width: 7px
+      height: 7px
+      position: absolute
+      top: 7px
+      left: -16px
+      transform: rotate(-90deg)
+      background-image: url('../img/drop.svg')
+
+.cat-check
+  padding-bottom: 25px
+  display: block
+  span
+    color: #3c404a
+    font-size: 0.875rem
+    font-weight: 400
+
+.accordion__item.is-active
+  display: block
+
+.anchor-title
+  display: block !important
+  &:before
+    transition: all .2s
+  &.is-active
+    &:before
+      transform: rotate(0)
+
+.look-more-years
+  color: #8e8e8e
+  font-size: 0.75rem
+  font-weight: 400
+  margin-bottom: 30px
+  text-decoration: underline
+  cursor: pointer
+  &:hover
+    text-decoration: none
+
+.priceRange_header
+  margin-bottom: 15px
+  +clr
+  span
+    display: block
+    width: 43%
+    float: left
+    color: #8e8e8e
+    font-size: 0.75rem
+    font-weight: 400
+
+  //.left
+  //
+  //.right
+
+
+.rangesubmitRow
+  margin-bottom: 20px
+  +clr
+
+.rangesubmitRow input[type="text"]
+  height: 30px
+  width: 58px
+  float: left
+  padding: 0 10px
+  box-shadow: inset 0 0 0 1px #d5d5d5
+
+.rangesubmitRow .dash
+  height: 30px
+  float: left
+  line-height: 30px
+  padding: 0 7px
+  color: #c9c9c9
+
+.range_wrap .noUi-background
+  box-shadow: none
+  background: #d3eeff
+  max-width: 195px
+
+.range_wrap .noUiRange
+  height: 10px
+  border-radius: 2px
+  box-shadow: none
+  border: 1px solid transparent
+  background: none
+  margin: 0 8px 30px
+
+.noUi-base
+  -webkit-transform: translate3d(0,0,0)
+  transform: translate3d(0,0,0)
+
+.noUi-base
+  width: 100%
+  height: 100%
+  position: relative
+  z-index: 1
+
+.range_wrap .noUi-connect
+  box-shadow: none
+  background: transparent
+  border-radius: 4px
+
+.range_wrap .noUi-horizontal .noUi-handle
+  width: 20px
+  height: 20px
+  background: $main
+  border-radius: 50%
+  left: -10px
+  box-shadow: none
+  border: 1px solid transparent
+  cursor: pointer
+
+.range_wrap
+  max-width: 200px
+
+
+.noUi-horizontal
+  height: 4px !important
+  border: 1px solid #d5d5d5
+
+.noUi-origin
+  position: absolute
+  right: 0
+  top: 0
+  left: 0
+  bottom: 0
+
+.noUi-target
+  margin-top: 25px
+  margin-bottom: 33px
+
+.noUi-handle:before, .noUi-handle:after
+  display: none
+
+.noUi-horizontal .noUi-handle
+  top: -8px
+
+.new-books
+  padding-top: 40px
+
+.mask
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  opacity: 0
+  bottom: 0
+  cursor: pointer
+  transition: all .3s
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%)
+
+  .basket
+    left: 50%
+    top: 55px
+    transform: translateX(-50%)
+
+.news__item:hover .mask
+  opacity: 1
+
+
+.add-to-basket
+  color: #fff
+  font-size: 0.813rem
+  font-weight: 400
+  position: relative
+  top: 31px
+  left: 50%
+  white-space: pre
+  transform: translateX(-50%)
+  display: inline-block
+
+.one-click
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  height: 31px
+  background: $main
+  text-align: center
+  +vertical
+  span
+    display: inline-block
+    vertical-align: middle
+    color: white
+    font-size: 0.813rem
+    font-weight: 600
+
+.banner-2
+  padding-top: 10px
+  padding-bottom: 37px
+  img
+    width: 100%
+
+.pagination
+  padding-bottom: 74px
+
+.pagination li
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  margin-left: 15px
+
+.pagination a
+  color: $text
+  font-size: 16px
+
+
+.pagination .active
+  font-weight: 700
+  border: 2px solid $main
+  padding: 5px 8px
+  border-radius: 50%
+  display: inline-block
+  width: 30px
+  height: 30px
+  position: relative
+  span
+    +vcenter
+
+
+.pagination li
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  margin-left: 15px
+
+.catalog .col-md-4
+  background-color: #f0f2f2
+  height: 100%
+
+.catalog .col-md-8
+  padding: 0 20px
+
+.top-nav
+  margin-bottom: 38px
+
+.top-nav__item
+  display: inline-block
+  color: #adadad
+  font-size: 0.875rem
+  font-weight: 400
+  padding-left: 30px
+  position: relative
+
+  &.active
+    color: $title
+  .arrow
+    display: inline-block
+    margin-right: 10px
+
+
+.left-card,
+.right-rec-aside
+  padding-top: 28px
+
+.card
+  padding-bottom: 77px
+
+.card-conainer
+  position: relative
+  min-height: 441px
+  padding-bottom: 40px
+  box-sizing: content-box
+  .stars
+    margin-bottom: 11px
+
+.card__pic
+  position: absolute
+  left: 0
+  top: 0
+  text-align: center
+  img
+    display: block
+
+.card__info
+  padding-left: 294px
+  width: 90%
+
+.card-title
+  color: $title
+  font-size: 1.5rem
+  font-weight: 400
+  margin-bottom: 14px
+  padding-top: 24px
+
+
+.card-code
+  color: #2d2e2f
+  font-size: 0.875rem
+  font-weight: 400
+  margin-bottom: 20px
+
+.book-info .grey-text
+  color: #8b8b8b
+  font-size: 0.875rem
+  font-weight: 400
+  width: 32%
+
+.book-info
+  table
+    table-layout: fixed
+  td
+    color: $title
+    font-size: 0.875rem
+    font-weight: 400
+    padding-bottom: 12px
+
+  a
+    color: #488bdd !important
+
+.card__buttons
+  padding-top: 25px
+
+  button
+    padding-top: 11px
+    padding-bottom: 11px
+    &:first-child
+    margin-right: 30px
+    font-size: 1rem
+    font-weight: 400
+  .button
+    border: 0
+
+.all-img-link
+  position: relative
+  top: 20px
+  color: #488bdd
+  font-size: 0.875rem
+  font-weight: 400
+  line-height: 30px
+  text-decoration: underline
+
+.tabular
+  color: #818181
+  font-size: 1rem
+  font-weight: 400
+  border-bottom: 1px solid $grey
+  line-height: 30px
+  display: flex
+  justify-content: space-between
+  padding: 0 30px
+  .item
+    display: flex
+    flex: 0 0 auto
+    cursor: pointer
+    line-height: 37px
+
+.tabular .item.active
+  color: $main !important
+  position: relative
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    top: calc(100% - 1px)
+    width: 135%
+    left: -50%
+    transform: translateX(25%)
+    height: 0.25rem
+    background-color: $main
+    border-radius: 0.188rem 0.188rem 0 0
+
+.tab
+  padding: 30px 0
+  p
+    color: $title
+    line-height: 24px
+    padding-bottom: 17px
+
+  .code
+    font-size: 1rem
+    font-weight: 700
+    color: black
+    padding-top: 17px

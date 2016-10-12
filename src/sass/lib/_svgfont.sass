@@ -5,18 +5,20 @@
 	font-weight: normal
 	font-style: normal
 
-$icon-button-burger: "\EA01"
-$icon-close: "\EA02"
-$icon-gal: "\EA03"
-$icon-no: "\EA04"
-$icon-search: "\EA05"
-$icon-shape-1: "\EA06"
-$icon-shape-2: "\EA07"
-$icon-shape-3: "\EA08"
-$icon-shape-4: "\EA09"
-$icon-shape-5: "\EA0A"
-$icon-shop-but: "\EA0B"
-$icon-yes: "\EA0C"
+$icon-a: "\EA01"
+$icon-button-burger: "\EA02"
+$icon-close: "\EA03"
+$icon-gal: "\EA04"
+$icon-line: "\EA05"
+$icon-no: "\EA06"
+$icon-search: "\EA07"
+$icon-shape-1: "\EA08"
+$icon-shape-2: "\EA09"
+$icon-shape-3: "\EA0A"
+$icon-shape-4: "\EA0B"
+$icon-shape-5: "\EA0C"
+$icon-shop-but: "\EA0D"
+$icon-yes: "\EA0E"
 
 
 %icon
@@ -33,12 +35,16 @@ $icon-yes: "\EA0C"
 	@extend %icon
 	display: inline-block
 
+.icon-a:before
+	content: $icon-a
 .icon-button-burger:before
 	content: $icon-button-burger
 .icon-close:before
 	content: $icon-close
 .icon-gal:before
 	content: $icon-gal
+.icon-line:before
+	content: $icon-line
 .icon-no:before
 	content: $icon-no
 .icon-search:before

@@ -6,6 +6,8 @@
 //=include lib/rating.min.js
 //=include lib/dropdown.min.js
 //=include lib/typed.js
+//=include lib/price.js
+//=include lib/tab.min.js
 //=include jquery.validete.min.js
 //=include header.js
 //=include counter.js
