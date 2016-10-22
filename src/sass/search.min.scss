@@ -44,9 +44,8 @@
 }
 .frame ul li {
   float: left;
-  width: 390px;
   height: 100%;
-  margin: 0 30px 0 0;
+  margin: 0 28px 0 2px;
   padding: 0;
   cursor: pointer;
 }
@@ -114,3 +113,171 @@
 .crazy ul li:nth-child(2n) { width: 100px; margin: 0 4px 0 20px; }
 .crazy ul li:nth-child(3n) { width: 300px; margin: 0 10px 0 5px; }
 .crazy ul li:nth-child(4n) { width: 400px; margin: 0 30px 0 2px; }
+
+
+body.overflow {
+  //position: fixed;
+  //width: 100%;
+  //height: 100%;
+  //overflow: hidden;
+  //background-color: rgba(22, 23, 24, 0.6)
+}
+
+.mobile-nav-bt {
+  float: right;
+  margin-right: 1.25rem; }
+
+.lines {
+  display: inline-block;
+  width: 2rem;
+  height: 0.4rem;
+  background: #333;
+  border-radius: 0.28571rem;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: relative; }
+
+.lines:before, .lines:after {
+  display: inline-block;
+  width: 2rem;
+  height: 0.4rem;
+  background: #333;
+  border-radius: 0.28571rem;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  left: 0;
+  content: '';
+  -ms-transform-origin: 0.28571rem center;
+  -o-transform-origin: 0.28571rem center;
+  -moz-transform-origin: 0.28571rem center;
+  -webkit-transform-origin: 0.28571rem center;
+  transform-origin: 0.28571rem center; }
+
+.lines:before {
+  top: 0.7rem; }
+
+.lines:after {
+  top: -0.7rem; }
+
+.navicon:hover .lines:before {
+  top: 0.8rem; }
+
+.navicon:hover .lines:after {
+  top: -0.8rem; }
+
+.navicon.close {
+  -ms-transform: scale3d(0.8, 0.8, 0.8);
+  -o-transform: scale3d(0.8, 0.8, 0.8);
+  -moz-transform: scale3d(0.8, 0.8, 0.8);
+  -webkit-transform: scale3d(0.8, 0.8, 0.8);
+  transform: scale3d(0.8, 0.8, 0.8); }
+
+.navicon.x.close .lines {
+  background: transparent; }
+
+.navicon.x.close .lines:before, .navicon.x.close .lines:after {
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  top: 0;
+  width: 2.5rem;  }
+
+.navicon.x.close .lines:before {
+  -ms-transform: rotate3d(0, 0, 1, 45deg);
+  -o-transform: rotate3d(0, 0, 1, 45deg);
+  -moz-transform: rotate3d(0, 0, 1, 45deg);
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+  transform: rotate3d(0, 0, 1, 45deg); }
+
+.navicon.x.close .lines:after {
+  -ms-transform: rotate3d(0, 0, 1, -45deg);
+  -o-transform: rotate3d(0, 0, 1, -45deg);
+  -moz-transform: rotate3d(0, 0, 1, -45deg);
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+  transform: rotate3d(0, 0, 1, -45deg); }
+
+.mobile-container {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  z-index: 9;
+  background-color: rgba(22, 23, 24, 0.95);
+  -webkit-transition: all .3s ease 0s;
+  transition: all .3s ease 0s;
+}
+.mobile-container.show {
+  left: 0; }
+
+.mobile-inside-container {
+  position: relative;
+  padding-bottom: 2rem;
+  min-height: 100%;
+  text-align: center; }
+
+
+.ui.star.rating .icon {
+  width: 1.25em;
+  height: auto;
+  color: rgba(0, 0, 0, 0.15);
+  text-shadow: none;
+}
+
+  .ui.rating .icon {
+    padding: 0;
+    margin: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+    cursor: pointer;
+    width: 1.25em;
+    -webkit-transition: opacity .1s ease, background .1s ease, text-shadow .1s ease, color .1s ease;
+    transition: opacity .1s ease, background .1s ease, text-shadow .1s ease, color .1s ease;
+    color: rgba(0, 0, 0, 0.15);
+    font-family: Rating;
+    line-height: 1;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    background-image: url(../img/star.png);
+    background-repeat: no-repeat;
+    height: 15px !important;
+  }
+
+.scrollbar-mobi {
+  position: absolute;
+  left: 10px;
+  width: 2px;
+  height: inherit;
+  background: #ccc;
+  line-height: 0;
+}
+
+.scrollbar-mobi .handle {
+  width: 100%;
+  height: 100px;
+  background: #292a33;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.scrollbar-mobi .handle .mousearea {
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 22px;
+  height: 100%;
+}

@@ -18,7 +18,7 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="order-section__inside">
                             <h2 class="h3">Мой заказ</h2>
                             <div class="order">
@@ -30,9 +30,9 @@
                                     <div class="order-item__author">Марина Комисарова</div>
                                     <span class="count">Количество</span>
                                     <div class="counter">
-                                        <button type="button" data-rel="-1" class="counter-nav prev default"><span>-</span></button>
+                                        <button type="button" data-rel="-1" class="counter-nav prev default"><i class="icon icon-mn"></i></button>
                                         <div class="counter-val">1</div>
-                                        <button type="button" data-rel="+1" class="counter-nav next"><span>+</span></button>
+                                        <button type="button" data-rel="+1" class="counter-nav next"><i class="icon icon-pl"></i></button>
                                     </div>
                                     <div class="order__price"><span>249</span> грн</div>
                                 </div>
@@ -50,9 +50,9 @@
                                     <div class="order-item__author">Марина Комисарова</div>
                                     <span class="count">Количество</span>
                                     <div class="counter">
-                                        <button type="button" data-rel="-1" class="counter-nav prev default"><span>-</span></button>
+                                        <button type="button" data-rel="-1" class="counter-nav prev default"><i class="icon icon-mn"></i></button>
                                         <div class="counter-val">1</div>
-                                        <button type="button" data-rel="+1" class="counter-nav next"><span>+</span></button>
+                                        <button type="button" data-rel="+1" class="counter-nav next"><i class="icon icon-pl"></i></button>
                                     </div>
                                     <div class="order__price"><span>249</span> грн</div>
                                 </div>
@@ -70,9 +70,9 @@
                                     <div class="order-item__author">Марина Комисарова</div>
                                     <span class="count">Количество</span>
                                     <div class="counter">
-                                        <button type="button" data-rel="-1" class="counter-nav prev default"><span>-</span></button>
+                                        <button type="button" data-rel="-1" class="counter-nav prev default"><i class="icon icon-mn"></i></button>
                                         <div class="counter-val">1</div>
-                                        <button type="button" data-rel="+1" class="counter-nav next"><span>+</span></button>
+                                        <button type="button" data-rel="+1" class="counter-nav next"><i class="icon icon-pl"></i></button>
                                     </div>
                                     <div class="order__price"><span>249</span> грн</div>
                                 </div>
@@ -80,19 +80,17 @@
                                     <i class="icon icon-close"></i>
                                 </button>
                             </div>
-
-
                         </div>
 
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="order-get">
                             <h2 class="h3">Оформление заказа</h2>
                             <p class="order-get__auth">Если вы хотите следить за вашими заказами, получать скидки пройдите
                                 несложный процес <a class="auth-bask">Авторизации</a>
                             </p>
-                            <form class="order-form" action="">
+                            <form novalidate class="order-form" action="">
 
                                 <div class="order-form__indide">
                                     <div class="input-title">Имя: <span class="">*</span></div>
@@ -117,7 +115,7 @@
                                     <div class="input-title">Способ доставки: <span>*</span></div>
 
                                     <div class="ui selection grey-drop dropdown">
-                                        <input type="hidden" name="way-pay">
+                                        <input type="hidden" name="waypay">
                                         <i class="dropdown-icon"></i>
                                         <div class="default text">Самовывоз</div>
                                         <div class="menu">
@@ -127,12 +125,13 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <span class="add_comm">Добавить комментарий</span>
+                                        <div class="show_fild"><span>Добавить комментарий</span></div>
+                                        <textarea name="comment"   class="add-com-area"></textarea>
                                     </div>
 
                                     <div>
-                                        <span  class="show_fild">Использовать промо код</span>
-                                        <input type="text" value="" name="promokod" class="promokod">
+                                        <span class="show_fild"><span>Использовать промо код</span></span>
+                                        <input class="input promokod" type="text" value="" name="promokod">
                                     </div>
 
                                     <p class="usloviya_order">

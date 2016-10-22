@@ -2,10 +2,13 @@
 
 
 header.header
-  background-image: url(../img/main-header.jpg)
+  //background-image: url(../img/main-header.jpg)
   +cover
   +clr
   min-height: 480px
+  +r(992)
+    display: table
+    width: 100%
 
 .header-top.fixed
   position: fixed
@@ -14,78 +17,171 @@ header.header
   right: 0
   top: 0
   z-index: 500
+  +r(767)
+    position: absolute
+
 
 .header-top
-  padding: 30px 0
+  padding: 15px 0
+  position: relative
   +tr(all .3s)
+  +r(1025)
+    padding: 8px 0
+
+
+  .container
+    position: static
+    //display: flex
+    //justify-content: space-between
 
   &.scrolling
     padding: 8px 0
     background-color: rgba(22, 23, 24, 0.76)
     box-shadow: 0 0.313rem 0.625rem rgba($title, 0.15)
+.bg-fix
+  background-color: rgba(22, 23, 24, 0.6)
+  position: fixed
+  left: 0
+  right: 0
+  bottom: 0
+  z-index: 10
+  transition: all .2s
+  visibility: hidden
+  opacity: 0
+  top: 100px
 
-.menu-open
-  overflow: hidden
-  .header-menu
-    display: block
+.menu-open .bg-fix
+  visibility: visible
+  opacity: 1
+
+.reccomends-container
+  display: flex
+  justify-content: space-between
 
 .header-menu-outside
-  padding-top: 40px
+  position: absolute
+  left: 0
+  top: calc(100% - 28px)
+  width: 100%
+  padding-top: 23px
+  visibility: hidden
+  opacity: 0
+  transition: all .2s
+  z-index: 500
 
 
 .header-menu
   box-shadow: 0 0.313rem 1.563rem rgba($title, 0.25)
-  position: fixed
-  left: 0
-  width: 100%
-  z-index: 9991
-  display: none
-  bottom: 0
-  background: $bg
-  overflow-y: auto
-  overflow-x: hidden
-
+  background: #f0f2f2
 
 .icon-button-burger
   margin-right: 15px
 
 #js-open-menu
   cursor: pointer
-  //&:hover
-  //  .header-menu
-  //    display: block
 
-.header-cat
+.header-cat-outer
   display: inline-block
   vertical-align: middle
+
+.header-cat
   border: 1px solid $main
   color: #fff
   +fs(14)
   font-weight: 300
   text-transform: uppercase
-  padding: 6px 30px 9px 0
+  padding: 8px 30px 9px 0
   padding-left: 15px
-  span
-    vertical-align: middle
+  +r(1024)
+    display: none
+
+.header-cat:hover .header-menu-outside
+  visibility: visible
+  opacity: 1
+
+
+.header-cat-outer:hover + .bg-fix
+  visibility: visible
+  opacity: 1
+
 
 .header-logo
   display: inline-block
   vertical-align: middle
   margin-right: 20px
+  +r(360)
+    margin-right: 0
   a
     display: block
+  img
+    +r(538)
+      width: 80%
 
 
 .header__left-block
   float: left
+  +r(360)
+    width: 61%
+
+.menu-btn
+  display: inline-block
+  width: 25px
+  height: 20px
+  vertical-align: middle
+  cursor: pointer
+  position: absolute
+  top: 23px
+  right: 21px
+  //+rm(767)
+  //  top: 50%
+  //  transform: translateY(-50%)
+
+.mobile-nav-bt
+  float: right
+  display: none
+  +r(1025)
+    display: block
+
+.line
+  display: inline-block
+  width: 100%
+  height: 2px
+  background: #fff
+  position: absolute
+  top: 50%
+  margin-top: -1px
+
+.line:before
+  top: 7px
+
+.line:after, .line:before
+  content: ''
+  display: inline-block
+  height: 2px
+  width: 100%
+  background: #fff
+  position: absolute
+
+.line:after
+  top: -7px
+
+
 
 .header__right-block
   float: right
-  margin-top: 6px
-.header__menu
+  margin-top: 11px
+  +r(1025)
+    margin-top: 6px
+
+.header__right-block .header__menu
   display: inline-block
   padding-right: 39px
   border-right: 1px solid $main
+  +r(1000)
+    margin-right: 20px
+  +r(992)
+    padding-right: 5px
+    border-right: none
   li
     display: inline-block
     vertical-align: middle
@@ -103,10 +199,32 @@ header.header
   display: inline-block
   vertical-align: middle
   margin-left: 20px
+  +r(1024)
+    display: none
+
+
+.mobile-menu__header .header__signup-panel
+  display: inline-block !important
+
+
+
+.header__right-block
+  .header__signup-panel
+    +r(992)
+      display: none
+
+  .header__menu
+    +r(1024)
+      display: none
+
+
   li
     display: inline-block
     vertical-align: middle
     margin-right: 30px
+    +r(992)
+      margin-right: 18px
+
 
   a
     color: #c9c9c9
@@ -115,13 +233,88 @@ header.header
     line-height: 48px
     text-transform: uppercase
 
+.close-container
+  position: absolute
+  left: 108%
+
+.mobile-nav-bt.disable
+  display: none
+
+
+.entrance-mob
+  width: 100%
+  &:after
+    content: ''
+    width: 100%
+    height: 1px
+    background: #717171
+
+.mobile-menu__body
+  ul
+    margin-left: 30px
+
+
+.nonitembased .catalog-menu__list li
+  display: block
+
+
+.mobile-container
+  z-index: 500
+  .search-input-header
+    padding-left: 5px
+    transition: none
+
+  .search-form.open .search-input-header
+    right: -6px
+    left: auto
+    padding-left: 10px
+    width: inherit
+
+  li
+    display: inline-block
+    margin-right: 30px
+    a
+      color: white !important
+    +r(992)
+      margin-right: 18px
+
+  .search-form
+    position: absolute
+    right: 10px
+    top: 0
+    display: block
+    width: inherit
+
+  .search-input-container
+    width: inherit
+
+  a
+    color: #c9c9c9
+    font-size: 14px
+    font-weight: 700
+    line-height: 35px
+    text-transform: uppercase
+
+.basket
+  +r(1025)
+    margin-right: 65px
+    margin-top: 3px
+  +r(360)
+    margin-top: 0
+
+  //+r(538)
+  //  transform: scale(.8)
+  //  margin-right: 45px
+
+.basket
+  display: inline-block
+  vertical-align: middle
+
 .basket, .search
   width: 40px
   height: 40px
   border: 1px solid $main
   border-radius: 20px
-  display: inline-block
-  vertical-align: middle
   position: relative
   cursor: pointer
   .icon
@@ -137,14 +330,57 @@ header.header
 
 .search-input
   margin-left: 20px
+  +r(1025)
+    padding: 3px 30px
+
+
+.search-form.open
+  .search
+    border: none
+
+
+.search-form
+  position: relative
+  display: inline-block
+  vertical-align: middle
+
+  +r(1024)
+    display: none
+
+
+.search-input-header
+  border-radius: 50px
+  height: 40px
+  top: 0
+  border: 1px solid transparent
+  left: 20px
+  position: absolute
+  width: 0
+  background: transparent
+  color: #fff
+  transition: all 0.5s
+
+.search-form.open .search-input-header
+  width: 400px
+  padding-left: 48px
+  border: 1px solid $main
+
+.open-search
+  .header__right-block .header__menu
+    display: none
+
+
+
+.open-search .mobile-container .header__signup-panel
+  visibility: hidden
 
 .icon-search
   color: white !important
 
 .basket-num
   width: 20px
-  top: -6px
-  right: -50%
+  top: -14px
+  right: -58%
   height: 20px
   border-radius: 50%
   display: inline-block
@@ -162,33 +398,62 @@ header.header
     text-align: center
     font-weight: 300
     margin-bottom: 32px
+    +r(480)
+      font-size: 24px
 
 .header__search
   padding-top: 180px
+  +r(1100)
+    padding-top: 114px
+
+  +r(992)
+    display: table-cell
+    vertical-align: middle
+    padding-top: 0
 
 .search
   margin-left: 20px
+  z-index: 50
 
 .search-block
   max-width: 730px
   margin: 0 auto
   position: relative
+  +r(767)
+    width: 90%
   input
     padding: 20px 150px 20px 37px
     width: 100%
     position: relative
+    color: #333
+    +r(1025)
+      padding: 16px 110px 16px 37px
+      font-size: 1rem
     +fs(24)
     border-radius: 33px
     box-shadow: 0 1px 4px rgba($title, 0.25)
     font-weight: 300
     font-family: 'Open Sans'
-    color: #c8c9c9
     +fs(24)
     &::placeholder
       color: #c8c9c9
       font-weight: 300 !important
       +fs(24)
       font-family: 'Open Sans'
+    +r(767)
+      font-size: 1rem
+
+.search-input.icon-search
+  display: none
+  +r(922)
+    display: inline-block
+    font-size: 20px
+    padding: 0
+    width: 40px
+    height: 40px
+    top: 6px
+    border-radius: 50%
+    right: 7px
 
 
 .button.search-input
@@ -196,19 +461,34 @@ header.header
   right: 10px
   top: 10px
   bottom: 10px
+  +r(992)
+    display: none
+
 
 .ui.star.rating .active.icon
   text-shadow: none !important
+
+
 
 .book-slide
   +clr()
   padding: 70px 0
   padding-bottom: 0
+  +r(480)
+    padding: 35px 0
 
 
 .book-slider__left-block
   max-width: 510px
   float: left
+  +r(1024)
+    max-width: 452px
+  +r(800)
+    width: 100%
+    max-width: initial
+    float: none
+    text-align: center
+
   p
     color: #6c6969
     font-size: 16px
@@ -216,16 +496,21 @@ header.header
     line-height: 30px
 
 .left-block-footer__more
-  color: $title
-  +fs(18)
-  font-weight: 400
-  &:after
-    content: ''
-    +arr(10,6, #333333, b)
-    +rotate(-90)
-    display: inline-block
-    vertical-align: middle
-    margin-left: 5px
+  span
+    color: $title
+    +fs(18)
+    font-weight: 400
+    position: relative
+    &:after
+      content: ''
+      +arr(10,6, #333333, b)
+      +rotate(-90)
+      display: inline-block
+      vertical-align: middle
+      margin-left: 5px
+      position: absolute
+      right: -26px
+      top: 43%
 
 .left-block-footer
   margin-top: 54px
@@ -246,9 +531,39 @@ header.header
 .stars
   margin-bottom: 29px
 
+.scrollbar .handle
+  +r(767)
+    width: 200px
+
+.mobile-menu__body
+  position: relative
+
+.scrollbar-mobi
+  width: 6px !important
+  top: 15px
+  height: 90%
+  border-radius: 5px
+  display: none
+  +rh(928)
+    display: block
+
+
 .book-slider__right-block
   float: right
   transform: translate(0, -113px)
+  img
+    +r(800)
+      margin: 0 auto
+      margin-bottom: 25px
+      max-width: 90%
+    +r(767)
+      max-width: 60%
+  +r(800)
+    float: none
+    transform: translate(0)
+
+.book-slider .slick-arrow
+  display: none
 
 .book-slider-container
   .slick-list
@@ -260,6 +575,15 @@ header.header
     border-radius: 0.25rem
     padding-bottom: 0
     box-shadow: 0 0.063rem 0.25rem rgba($title, 0.25)
+    +r(1280)
+      max-width: 1140px
+    +r(1280)
+      padding: 50px 80px
+    +r(1024)
+      padding: 45px
+    +r(480)
+      transform: translate(0, -40px)
+      padding: 25px
 
 
 .slick-prev:before,
@@ -281,58 +605,80 @@ header.header
   width: 18px
   top: 213px
 
-.menu-picture-item
-  height: 100px
-  text-align: center
-  border-radius: 4px
-  display: block
-  margin-bottom: 30px
-  background-color: black
+//.menu-picture-item
+//  height: 100px
+//  text-align: center
+//  border-radius: 4px
+//  display: block
+//  margin-bottom: 30px
+//  background-color: black
+//  position: relative
+//  overflow: hidden
+//  background-size: 370px 100px
+//  background-position: 50% 50%
+//  +tr(all .3s)
+//  +vertical
+//
+//  &:hover
+//    .menu-picture__title
+//      color: $main
+//    background-size: 401px 106px
+//    background-position: center center
+
+
+//.nav
+//  &-1
+//    background-image: url('../img/nav-1.png')
+//
+//  &-2
+//    background-image: url('../img/nav-2.png')
+//
+//  &-3
+//    background-image: url('../img/nav-3.png')
+//
+//  &-4
+//    background-image: url('../img/nav-4.png')
+//
+//  &-5
+//    background-image: url('../img/nav-5.png')
+//
+//  &-6
+//    background-image: url('../img/nav-6.png')
+.nav-block
   position: relative
   overflow: hidden
-  background-size: 370px 100px
-  background-position: 50% 50%
-  +tr(all .3s)
-  +vertical
-
+  margin-bottom: 20px
+  border-radius: 4px
+  -webkit-mask-image: -webkit-radial-gradient(circle, white, black)
   &:hover
-    .menu-picture__title
-      color: $main
-    background-size: 401px 106px
-    background-position: center center
+    img
+      transform: scale(1.2)
 
+  img
+    background-color: black
+    display: block
+    width: 100%
+    transition: transform 1.2s ease-out
 
-.nav
-  &-1
-    background-image: url('../img/nav-1.png')
-
-  &-2
-    background-image: url('../img/nav-2.png')
-
-  &-3
-    background-image: url('../img/nav-3.png')
-
-  &-4
-    background-image: url('../img/nav-4.png')
-
-  &-5
-    background-image: url('../img/nav-5.png')
-
-  &-6
-    background-image: url('../img/nav-6.png')
-
+  .menu-picture__title
+    +vcenter
 
 .menu-picture__title
   display: inline-block
   vertical-align: middle
   color: #fff
+  white-space: nowrap
   font-size: 1.125rem
   font-weight: 700
   text-transform: uppercase
+  +r(1037)
+    font-size: 1rem
+  +r(767)
+    font-size: 1.25rem
 
 .button-new
   background-color: #be2747
-  border-radius: 0.938rem
+  border-radius: 40px
   color: #fff
   font-size: 0.75rem
   padding: 10px 17px
@@ -340,22 +686,71 @@ header.header
   z-index: 10
   transform: translate(0, -50%)
   right: 0
+  top: 0
 
 .manu-picture-container
   margin-bottom: 80px
+  +r(1024)
+    text-align: center
+  +r(480)
+    margin-bottom: 40px
+
+  .col-inline-xs-5
+    +r(767)
+      width: 100% !important
+
+.popular__slider
+  .col-inline-4
+    vertical-align: top
+    +r(1024)
+
+
 
 .popular-item,
-.order,
 .interest
   position: relative
   height: 180px
   margin-bottom: 80px
   +vertical
+  +r(800)
+    height: initial
 
   .text-wrap
     padding-left: 161px
     vertical-align: middle
     display: inline-block
+    +r(992)
+      padding-left: 0
+      text-align: center
+      margin-bottom: 0
+    +r(767)
+      width: 100%
+
+.order
+  position: relative
+  height: 180px
+  margin-bottom: 80px
+  +vertical
+  +r(800)
+    height: initial
+
+  .text-wrap
+    padding-left: 161px
+    vertical-align: middle
+    display: inline-block
+    +r(767)
+      padding-left: 0
+      text-align: center
+      margin-bottom: 0
+      width: 100%
+
+.order
+  +r(767)
+    margin-bottom: 50px
+
+  img
+    +r(767)
+      display: block
 
   .h3
     color: $title
@@ -364,6 +759,8 @@ header.header
     line-height: 20px
     text-transform: uppercase
     padding-bottom: 15px
+    +r(767)
+      margin: 0 auto
 
 .popular-item__author,
 .order-item__author,
@@ -371,8 +768,9 @@ header.header
   color: $author-book
   font-size: 0.875rem
   font-weight: 700
-  line-height: 24px
   padding-bottom: 26px
+  +r(992)
+    padding-bottom: 6px
 
 .popular-item__price,
 .order__price,
@@ -384,26 +782,61 @@ header.header
   line-height: 24px
 
 .popular-item__pic,
-.order-item__pic,
 .interest-item__pic
   position: absolute
   left: 0
   top: 0
+  +r(922)
+    position: static
+    margin-bottom: 18px
   img
     box-shadow: 0 0.313rem 1.375rem rgba(26, 35, 42, 0.45)
+    +r(922)
+      margin: 0 auto
+
+.order-item__pic
+  position: absolute
+  left: 0
+  top: 0
+  +r(767)
+    position: static
+    margin-bottom: 18px
+  img
+    box-shadow: 0 0.313rem 1.375rem rgba(26, 35, 42, 0.45)
+    +r(922)
+      margin: 0 auto
+
+.order-item__pic
+  img
+    +r(767)
+      display: block
 
 .popular-books
   background-color: #f0f2f2
   padding-top: 70px
-  padding-bottom: 60px
+  padding-bottom: 40px
+  +r(480)
+    padding-top: 35px
+    padding-bottom: 20px
   .h2
     padding-bottom: 70px
+    +r(480)
+      padding-bottom: 35px
 
-  .slick-prev
+  .slick-next
     right: -30px
+    +r(922)
+      right: 10px
 
   .slick-prev
     left: -30px
+    +r(922)
+      left: 10px
+
+.hit, .new, .discount
+  +r(767)
+    top: -22px
+
 
 .hit, .new, .discount
   width: 3.438rem
@@ -422,6 +855,9 @@ header.header
     text-transform: uppercase
     font-size: 0.75rem
     color: white
+    +r(767)
+      line-height: 22px
+
 
 .new
   background-color: #2377f5 !important
@@ -439,6 +875,9 @@ header.header
   margin-top: 60px
 
 .popular__slider
+  .slick-track
+    margin-top: 26px
+
   .slide
     margin: 0 25px
 
@@ -488,6 +927,17 @@ header.header
     font-size: 0.875rem
     //font-weight: 300
     line-height: 24px
+.frame
+  height: 408px
+  +r(922)
+    height: 464px
+
+.frame ul li
+  width: 367px
+  &:last-child
+    margin-right: 2px
+  +r(922)
+    width: 300px
 
 .review-question
   color: #9d9d9d
@@ -509,6 +959,8 @@ header.header
   .icon
     font-size: 15px
     +tr(all .2s)
+    width: 18px
+
 .icon-yes
   color: $main
   margin-right: 5px
@@ -539,11 +991,15 @@ header.header
 
 .reviews
   padding: 80px 0
+  +r(480)
+    padding: 40px 0
   .h2
     padding-bottom: 80px
+    +r(480)
+      padding-bottom: 40px
 
 .scrollbar
-  width: 100%
+  width: calc(100% - 28px)
   height: 10px
   margin-top: 20px
 
@@ -552,6 +1008,8 @@ header.header
   padding: 80px 0
   text-align: center
   background-image: url('../img/register-bg.jpg')
+  +r(480)
+    padding: 40px 0
   +cover
 
 
@@ -561,6 +1019,10 @@ header.header
   font-weight: 400
   line-height: 48px
   padding-bottom: 40px
+
+  +r(480)
+    font-size: 1.5rem
+    line-height: 33px
 
 
 .registration-block__text
@@ -573,9 +1035,17 @@ header.header
 .registration-block__info
   max-width: 864px
   margin: 0 auto
+  +r(767)
+    width: 90%
 
 .iformation-section
   padding: 77px 0 81px 0
+  +r(480)
+    padding: 40px 0 40px 0
+//.col-md-8
+  //  +r(1024)
+
+
 
 .overviews
   .h2
@@ -650,6 +1120,9 @@ header.header
   
 .overviews-header-right
   float: right
+  +r(767)
+    float: none
+    text-align: center
 
   span
     display: inline-block
@@ -659,9 +1132,15 @@ header.header
 .overviews__header
   +clr
   margin-bottom: 66px
+  +r(480)
+    margin-bottom: 33px
   .h2
     float: left
     display: inline-block
+    +r(480)
+      float: none
+      display: block
+      margin-bottom: 19px
 
 .overview-item
   width: 100%
@@ -669,17 +1148,24 @@ header.header
   border-radius: 0.25rem
   box-shadow: 0 0.063rem 0.25rem rgba($title, 0.25)
   position: relative
-  padding: 29px 36px 42px 36px
+  padding: 29px 36px 71px 36px
   margin-bottom: 66px
+  &:last-child
+    +r(767)
+      margin-bottom: 15px
 
 .overview-item__right-block
   position: absolute
   top: 30px
   left: 30px
   transform: translateY(-50px)
+  +r(767)
+    position: static
+    transform: translate(0)
+
   .name
     text-align: center
-    padding-top: 30px
+    padding-top: 12px
     .author
       color: #848484
       font-size: 0.875rem
@@ -693,12 +1179,22 @@ header.header
       margin-bottom: 10px
 
 .overview-item__left-block
-  padding-left:  160px
+  padding-left:  195px
+  +r(767)
+    padding: 0
+
+.overview-item-picture
+  +r(767)
+    text-align: center
 
 .overview-item-picture img
   box-shadow: 0 0.313rem 1.375rem rgba(26, 35, 42, 0.45)
 
 .overview-item__user
+  +r(767)
+    padding-top: 40px
+    text-align: center
+
   .stars
     margin-bottom: 20px !important
     margin-top: 10px
@@ -719,26 +1215,65 @@ header.header
     vertical-align: middle
 
 .overviews__footer
+  +r(767)
+    text-align: center
+    text-align-last: center
+    margin-bottom: 50px
+  button
+    +r(480)
+      width: 230px
+  .button
+    +r(1137)
+      margin-right: 20px
+    +r(480)
+      margin-right: 0
+      margin-bottom: 20px
+
+
+
   +justify
   *
     display: inline-block
     vertical-align: middle
+  +r(1137)
+    text-align: left
+    //text-align-last: left
 
 .reg-warning
   color: $title
   font-size: 0.875rem
   font-weight: 300
   line-height: 24px
+  +r(1137)
+    display: block
+    margin-bottom: 27px
+  +r(767)
+    text-align: center
+
 
 .left-sidebar
+  +r(767)
+    padding-top: 25px
+
   .h2
     padding-bottom: 80px
     text-align: left
+    +r(767)
+      padding-bottom: 23px
+
+  +r(767)
+    padding-top: 18px
+    padding-bottom: 23px
+
+.news-but-wrap
+  +r(767)
+    text-align: center
 
 .news__anouns
   margin-bottom: 20px
   padding-bottom: 26px
   border-bottom: 1px solid  #d5d5d5
+  padding-left: 6px
   .time
     color: #a3a3a3
     font-size: 0.875rem
@@ -774,6 +1309,9 @@ header.header
 .avances__wrap
   display: flex
   justify-content: space-between
+  -webkit-flex-flow: row wrap
+  +r(767)
+    //flex-direction: column
 
 .adv-item-pic
   width: 100px
@@ -795,32 +1333,56 @@ header.header
   line-height: 24px
   text-align: center
   margin-top: 30px
+  +r(767)
+    margin-top: 15px
 
 .adv-item
-  //max-width: 144px
+  &:last-child
+    +r(767)
+      display: none
+
+  +r(767)
+    margin-bottom: 18px
+    flex: 1 0 50%
+  +r(480)
+    flex: 1 0 100%
+    height: 167px
   
 .footer
   padding: 80px 0
   background-color: $bg
-  position: absolute
+  position: static
   right: 0
   bottom: 0
   left: 0
+  +r(767)
+    padding: 40px 0
+    text-align: center
 
 .footer__logo
   float: left
+  +r(767)
+    display: none
 
 .social
   float: right
+  +r(767)
+    float: none
+    margin-bottom: 25px
+    display: inline-block
 
 .copyright
-  margin: 0 40% 0 20%
+  margin: 0 4% 0 237px
   max-width: 390px
   color: #464646
   font-family: "Open Sans"
   font-size: 0.875rem
   font-weight: 300
   line-height: 24px
+  +r(767)
+    margin: 0 auto
+    float: none
+
 
 .fb
   path
@@ -872,55 +1434,83 @@ header.header
 
 .catalog-menu__list
   li
-    margin-bottom: 15px
+    margin-bottom: 7px
   a
     color: $title
     font-size: 0.875rem
     font-weight: 400
+    text-transform: none
     &:hover
       text-decoration: underline
 
 .catalog-menu__top
-  padding: 40px 0
+  padding: 17px 0
   border-bottom: 1px solid #d5d5d5
+  .col-md-3
+    +r(1000)
+      width: 50%
+      padding-left: 15px
+      padding-right: 15px
 
-.reccomends-container
-  //+justify
 
 
-.reccomends-picture
+
+.header-menu .reccomends-picture
   img
     margin-bottom: 17px
-    margin: 0 auto
-    height: 184px
-    width: 100%
+    height: 151px
+    width: 80%
     box-shadow: 0 0.313rem 1.375rem rgba(26, 35, 42, 0.45)
 
 
 .reccomends-text
   .name
-    font-size: 0.875rem
+    font-size: 0.8rem
     font-weight: 600
     color: $title
     line-height: 20px
     margin-bottom: 13px
     text-align: left
+    +r(922)
+      text-align: center
   .price
     color: #8b8b8b
     line-height: 24px
     font-size: 1.25rem
 
 
-.reccomends__item,
+.reccomends__item
+  //padding: 0 47px
+  box-sizing: content-box
+
+
 .news__item,
 .popular__item
-  max-width: 130px
+  max-width: 136px
   display: inline-block
 
-.reccomends, popular
-  padding: 40px 0
+.news__item
+  img
+    width: 100%
+  a.name
+    transition: all .2s
+    &:hover
+      text-decoration: underline
+      color: $main
+
+.reccomends__item
+  padding: 0 4%
+
+
+.reccomends,
+.popular
   .reccomends__title
     padding-bottom: 35px
+
+.reccomends
+  padding: 20px 0
+  +r(1023)
+    display: none
 
 .news__item,
 .popular__item
@@ -933,10 +1523,15 @@ header.header
   .reccomends-picture
     margin-bottom: 15px
     position: relative
+    img
+      width: 100%
+      display: block
 
 .news-container,
 .popular-container
   margin: 0 -20px
+  +r(922)
+    text-align: center
 
 .slick-arrow
   +tr(all .3s)
@@ -954,6 +1549,7 @@ header.header
 
 
 .heaader--second .header-top
+  //display: none
   padding: 8px 0
   background-color: rgba(22, 23, 24, 0.76)
 
@@ -984,13 +1580,9 @@ header.header
   color: #b8b8b8
   font-size: 1rem
   font-weight: 400
-  span
+  .icon
     font-size: 23px
     color: #b8b8b8
-    left: 4px
-    top: 2px
-    position: absolute
-    line-height: 10px
 
 .next
   span
@@ -1001,23 +1593,37 @@ header.header
 .counter-nav
   text-decoration: none
   cursor: pointer
-  width: 1.125rem
   position: relative
-  height: 1.125rem
-  border: 0.063rem solid #d6d6d6
   background-color: transparent
-  border-radius: 50%
-  //+vertical
+
+
+
+
 
 .counter
   margin-bottom: 16px
 
 .order-section .container
-  +rm(992)
+  +r(992)
   &:before
+    +r(767)
+      display: none
     content: ''
     position: absolute
     right: 50%
+    width: 1px
+    background-color: $grey
+    top: 0
+    bottom: 0
+
+.iformation-section .container
+  +r(992)
+  &:before
+    +r(767)
+      display: none
+    content: ''
+    position: absolute
+    right: 33%
     width: 1px
     background-color: $grey
     top: 0
@@ -1049,9 +1655,13 @@ header.header
 .order-section__inside
   .h3
     padding-bottom: 40px
+  +r(767)
+    text-align: center
 
 .order-get
   padding-left: 20px
+  +r(767)
+    padding-left: 0
   .h3
     padding-bottom: 34px
 
@@ -1073,12 +1683,22 @@ header.header
   right: 0
   top: 0
   +vertical
+  +r(922)
+    width: 20px
+    height: 20px
+    right: -15px
+  +r(767)
+    width: 26px
+    height: 26px
+    right: -10px
 
   .icon-close
     font-size: 15px
     color: $grey
     display: inline-block
     vertical-align: middle
+    +r(922)
+      font-size: 9px
 
 .order-form__indide
   border-bottom: 1px solid $grey
@@ -1103,7 +1723,7 @@ header.header
     text-overflow: ellipsis
 
 
-.cook_write
+.cook_write, .input
   border: 0.063rem solid #c4c4c4
   border-radius: 1.25rem
   height: 40px
@@ -1111,19 +1731,22 @@ header.header
   margin-bottom: 30px
   font-size: 14px
   padding-left: 20px
+  +r(767)
+    width: 100% !important
 
 .input-title
   font-size: 14px
   margin-bottom: 10px
 
-.add_comm, .show_fild
-  cursor: pointer
-  font-size: 14px
-  display: inline-block
-  margin-bottom: 21px
-  border-bottom: 1px dotted $title
-  &:hover
-    border-bottom-color: transparent
+.show_fild
+  span
+    cursor: pointer
+    font-size: 14px
+    display: inline-block
+    margin-bottom: 21px
+    border-bottom: 1px dotted $title
+    &:hover
+      border-bottom-color: transparent
 
 .order-get__auth
   font-size: 0.875rem
@@ -1207,6 +1830,11 @@ input[type="checkbox"]:checked:before
 .col-title
   padding-bottom: 43px
   text-align: left
+  +r(922)
+    padding-left: 20px
+  +r(767)
+    text-align: center
+    padding-left: 0
 
 .couneter-catalog
   min-width: 28px
@@ -1482,6 +2110,8 @@ input[type="checkbox"]:checked:before
 
 .pagination
   padding-bottom: 74px
+  +r(922)
+    text-align: center
 
 .pagination li
   position: relative
@@ -1512,6 +2142,9 @@ input[type="checkbox"]:checked:before
   display: inline-block
   vertical-align: middle
   margin-left: 15px
+  &.first
+    margin-left: 0
+
 
 .catalog .col-md-4
   background-color: #f0f2f2
@@ -1519,6 +2152,7 @@ input[type="checkbox"]:checked:before
 
 .catalog .col-md-8
   padding: 0 20px
+
 
 .top-nav
   margin-bottom: 38px
@@ -1530,6 +2164,8 @@ input[type="checkbox"]:checked:before
   font-weight: 400
   padding-left: 30px
   position: relative
+  &:first-child
+    padding-left: 0
 
   &.active
     color: $title
@@ -1544,6 +2180,8 @@ input[type="checkbox"]:checked:before
 
 .card
   padding-bottom: 77px
+  +r(767)
+    padding-bottom: 38px
 
 .card-conainer
   position: relative
@@ -1558,12 +2196,20 @@ input[type="checkbox"]:checked:before
   left: 0
   top: 0
   text-align: center
+  +r(767)
+    position: static
   img
     display: block
+    +r(767)
+      margin: 0 auto
+      width: 60%
 
 .card__info
   padding-left: 294px
   width: 90%
+  +r(767)
+    width: 100%
+    padding-left: 0
 
 .card-title
   color: $title
@@ -1599,16 +2245,28 @@ input[type="checkbox"]:checked:before
 
 .card__buttons
   padding-top: 25px
+  padding-left: 294px
+  +r(767)
+    padding-left: 0
 
   button
     padding-top: 11px
     padding-bottom: 11px
+    height: 40px
+    line-height: 18px
+    +r(767)
+      width: 230px
+
     &:first-child
-    margin-right: 30px
-    font-size: 1rem
-    font-weight: 400
+      margin-right: 30px
+      font-size: 1rem
+      font-weight: 400
+      +r(767)
+        margin-bottom: 20px
+
   .button
     border: 0
+
 
 .all-img-link
   position: relative
@@ -1633,6 +2291,9 @@ input[type="checkbox"]:checked:before
     flex: 0 0 auto
     cursor: pointer
     line-height: 37px
+
+  +r(767)
+    padding: 0
 
 .tabular .item.active
   color: $main !important
@@ -1661,3 +2322,326 @@ input[type="checkbox"]:checked:before
     font-weight: 700
     color: black
     padding-top: 17px
+
+input.error
+  border-color: #fd7575
+
+input.valid
+  border-color: $main
+
+
+
+.form-popup-outer
+  max-width: 489px
+
+.form-popup
+  box-sizing: border-box
+  //padding: 42px 32px
+  margin: 0 auto
+  background: #fff
+  border-radius: 4px
+  max-width: 480px
+  position: relative
+
+.signup-soc
+  text-align: center
+  .footer-social-link
+    margin: 0 15px
+    svg
+      width: 50px
+      height: 50px
+      display: inline-block
+
+.signup-soc__item
+  display: inline-block
+
+.form-popup-outer
+  text-align: center
+  .buttton-wrap
+    margin-bottom: 30px
+
+  .button
+    width: 80%
+    font-size: 0.875rem
+    text-transform: uppercase
+
+  .cook_write
+    width: 80%
+    position: relative
+    height: 50px
+    border-radius: 1.563rem
+
+.popup-header
+  .h2
+    color: $title
+    font-size: 1.5rem
+    font-weight: 400
+    padding-bottom: 28px
+    padding-top: 30px
+
+
+.popup-header-logo
+  padding: 35px 0
+  background-color: #f0f2f2
+  box-shadow: inset 0 -0.062rem 1.25rem rgba(0, 0, 0, 0.05)
+
+
+input
+  &::placeholder
+    color: #999
+    font-weight: 300
+    font-size: 0.875rem
+
+.form-signup
+  border-bottom: 1px solid $bg
+
+.footer-popup
+  padding: 30px 0
+
+.title-soc
+  padding-bottom: 26px
+
+.mfp-close
+  display: none !important
+
+.close-but
+  width: 25px
+  height: 25px
+  background-color: #7c7d80
+  border-radius: 50%
+  color: white !important
+  font-size: 31px
+  position: absolute
+  right: 16px
+  line-height: 19px
+  top: 17px
+  cursor: pointer
+  span
+    +vcenter
+    top: 11px
+    left: 13px
+
+
+.input-wrap
+  position: relative
+  .icon
+    position: absolute
+    font-size: 24px
+    color: $main
+    top: 13px
+    right: 16px
+    display: none
+
+.forget-but
+  position: absolute
+  width: 25px
+  height: 25px
+  background-color: #ddd
+  border-radius: 50%
+  color: white !important
+  font-size: 18px
+  top: 13px
+  right: 16px
+
+.input-wrap
+  width: 80%
+  margin: 0 auto
+  input
+    width: 100% !important
+
+.icon-gotovo
+  font-size: 150px
+  color: $main
+
+
+.popup-text
+  color: #464646
+  font-size: 0.875rem
+  font-weight: 300
+  line-height: 24px
+  margin: 0 auto
+  max-width: 353px
+
+//.mfp-bg
+//  z-index: 1000000
+
+.sc
+  .icon
+    display: block
+
+.m-n-s
+  +r(992)
+    display: none
+
+
+.m-n-x
+  +r(767)
+    display: none
+
+.mb
+  +r(1028)
+    display: none
+
+.close-btn
+  display: inline-block
+  width: 25px
+  height: 25px
+  position: relative
+  cursor: pointer
+
+.close-btn .line
+  background: transparent
+
+.close-btn .line:before
+  top: 0
+  transform: rotate(45deg)
+
+.close-btn .line:after
+  top: 0
+  transform: rotate(-45deg)
+
+.mobile-menu__header
+  padding: 25px
+  border-bottom: 1px solid #717171
+
+.nonitembased
+  height: inherit !important
+
+.mobile-menu__footer
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  padding: 25px
+  border-top: 1px solid #717171
+  ul
+    display: block
+  li
+    display: block
+    margin-bottom: 30px
+    +rh(480)
+      margin-bottom: 10px
+
+
+.mobile-menu__header
+  li
+    a
+      font-size: 12px
+
+  .header__menu
+    //position: absolute
+    //left: 50%
+    //transform: translateX(-50%)
+    //top: 71px
+    li
+      display: block
+      margin-bottom: 10px
+
+
+.mobile-container
+  .search
+    background: transparent
+    float: right
+  +r(767)
+    width: 80%
+
+
+
+.icon-mn
+  width: 18px
+  height: 18px
+  background-repeat: no-repeat
+  background-image: url(../img/mn.svg)
+
+.icon-pl
+  width: 18px
+  height: 18px
+  background-repeat: no-repeat
+  background-image: url(../img/pl.svg)
+
+
+.catalog-aside
+  +r(1024)
+    position: fixed
+    top: 0
+    transform: translateX(-100%)
+    z-index: 9
+    height: 100vh
+    background-color: #f0f2f2
+    -webkit-transition: all .3s ease 0s
+    transition: all .3s ease 0s
+    &.show
+      transform: translateX(0)
+      .catalog__inside
+        overflow-y: scroll
+        height: 100%
+
+.mob-filter
+  position: absolute
+  left: 100%
+  padding: 7px
+  border: 1px solid $main
+  border-left: none
+  top: 19%
+  +rm(992)
+    display: none
+  .icon
+    font-size: 20px
+    color: black
+
+.close
+  .icon-filter
+    &:before
+      content: "\EA03"
+
+.show_fild
+  display: block
+
+.selection,
+textarea
+  +r(767)
+    width: 100% !important
+    max-width: initial
+
+.add-com-area
+  height: 100px
+  width: 320px
+  resize: none
+  border: 0.063rem solid #c4c4c4
+  border-radius: 1.25rem
+  margin-bottom: 30px
+  font-size: 14px
+  font-family: 'Open Sans'
+  padding: 15px
+  display: none
+
+.promokod
+  display: none
+
+.tooltips
+  .tooltipster-base
+    z-index: 5000
+
+.popup-header-logo
+  border-radius: 4px 4px 0  0
+
+.tab .review-item
+  margin-bottom: 30px
+
+.reviews-tab .body-review
+  background-color: #f0f2f2
+
+.delivery
+  p
+    font-size: 14px
+
+  a
+    color: $main
+
+
+.delivery__title
+  font-size: 16px
+  color: $main
+  margin-bottom: 20px
+
+

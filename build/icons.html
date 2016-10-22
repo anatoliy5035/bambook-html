@@ -103,38 +103,44 @@
     .icon-close:before {
       content: "\EA03";
     }
-    .icon-gal:before {
+    .icon-filter:before {
       content: "\EA04";
     }
-    .icon-line:before {
+    .icon-gal:before {
       content: "\EA05";
     }
-    .icon-no:before {
+    .icon-gotovo:before {
       content: "\EA06";
     }
-    .icon-search:before {
+    .icon-no:before {
       content: "\EA07";
     }
-    .icon-shape-1:before {
+    .icon-search:before {
       content: "\EA08";
     }
-    .icon-shape-2:before {
+    .icon-shape-1:before {
       content: "\EA09";
     }
-    .icon-shape-3:before {
+    .icon-shape-2:before {
       content: "\EA0A";
     }
-    .icon-shape-4:before {
+    .icon-shape-3:before {
       content: "\EA0B";
     }
-    .icon-shape-5:before {
+    .icon-shape-4:before {
       content: "\EA0C";
     }
-    .icon-shop-but:before {
+    .icon-shape-5:before {
       content: "\EA0D";
     }
-    .icon-yes:before {
+    .icon-shop-but:before {
       content: "\EA0E";
+    }
+    .icon-success:before {
+      content: "\EA0F";
+    }
+    .icon-yes:before {
+      content: "\EA10";
     }
   </style>
 </head>
@@ -173,24 +179,32 @@
     </li>
     
     <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-gal" readonly>
+      <input class="icon-class-name autoselect" type="text" value=".icon-filter" readonly>
       <input class="icon-unicode autoselect" type="text" value="\EA04" readonly>
+      <div class="icon-container">
+        <i class="icon icon-filter"></i>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-gal" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA05" readonly>
       <div class="icon-container">
         <i class="icon icon-gal"></i>
       </div>
     </li>
     
     <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-line" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA05" readonly>
+      <input class="icon-class-name autoselect" type="text" value=".icon-gotovo" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA06" readonly>
       <div class="icon-container">
-        <i class="icon icon-line"></i>
+        <i class="icon icon-gotovo"></i>
       </div>
     </li>
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-no" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA06" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA07" readonly>
       <div class="icon-container">
         <i class="icon icon-no"></i>
       </div>
@@ -198,7 +212,7 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-search" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA07" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA08" readonly>
       <div class="icon-container">
         <i class="icon icon-search"></i>
       </div>
@@ -206,7 +220,7 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-shape-1" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA08" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA09" readonly>
       <div class="icon-container">
         <i class="icon icon-shape-1"></i>
       </div>
@@ -214,7 +228,7 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-shape-2" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA09" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA0A" readonly>
       <div class="icon-container">
         <i class="icon icon-shape-2"></i>
       </div>
@@ -222,7 +236,7 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-shape-3" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA0A" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA0B" readonly>
       <div class="icon-container">
         <i class="icon icon-shape-3"></i>
       </div>
@@ -230,7 +244,7 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-shape-4" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA0B" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA0C" readonly>
       <div class="icon-container">
         <i class="icon icon-shape-4"></i>
       </div>
@@ -238,7 +252,7 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-shape-5" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA0C" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA0D" readonly>
       <div class="icon-container">
         <i class="icon icon-shape-5"></i>
       </div>
@@ -246,15 +260,23 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-shop-but" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA0D" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA0E" readonly>
       <div class="icon-container">
         <i class="icon icon-shop-but"></i>
       </div>
     </li>
     
     <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-success" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA0F" readonly>
+      <div class="icon-container">
+        <i class="icon icon-success"></i>
+      </div>
+    </li>
+    
+    <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-yes" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA0E" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA10" readonly>
       <div class="icon-container">
         <i class="icon icon-yes"></i>
       </div>
