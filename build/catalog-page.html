@@ -12,7 +12,7 @@
 <body>
 <div class="wrapper">
     <header class="header heaader--second">
-        <div class="header-top">
+        <div class="header-top fixed">
             <div class="container">
                 <div class="header__left-block">
                     <div class="header-logo">
@@ -154,6 +154,12 @@
                         </div>
                         
                     </div>
+                    <div class="bg-fix"></div>
+                    <a id="open-mob-menu" class="mobile-nav-bt" href="javascript:;">
+                        <div class="menu-btn">
+                            <span class="line"></span>
+                        </div>
+                    </a>
                     <form action="" class="search-form">
     
                         <div class="search">
@@ -167,13 +173,7 @@
                         </div>
     
                     </form>
-    
                 </div>
-                <a id="open-mob-menu" class="mobile-nav-bt" href="javascript:;">
-                    <div class="menu-btn">
-                        <span class="line"></span>
-                    </div>
-                </a>
     
                 <div class="mobile-container">
                     <div class="mobile-inside mobile-menu__header">
@@ -276,181 +276,182 @@
         </div>
     </header>
     <!-- BEGIN  out-->
-    <main class="main-offset">
-        <section class="catalog">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 catalog-aside">
-                        <div class="catalog__inside">
-                            <h2 class="h3 col-title">Категории</h2>
-                            <ul class="menu-catalog">
-                                <li>
-                                    <a href="#">Букинистическая книга
-                                        <div class="couneter-catalog"><span>+12</span></div>
-                                    </a>
-                                </li>
-                                <li><a href="#">Дом. Досуг. Семья. Хобби</a></li>
-                                <li><a href="#">Естественные науки</a></li>
-                                <li>
-                                    <a href="#">Книги детям</a>
-                                </li>
-                                <li><a href="#">Компьютеры. Программирование и Cети</a></li>
-                                <li>
-                                    <a href="#">Наука. Техника
-                                        <div class="couneter-catalog"><span>+5</span></div>
-                                    </a>
-                                </li>
-                                <li><a href="#">Нехудожественная литература</a></li>
-                                <li><a href="#">Образование и учеба</a></li>
-                                <li><a href="#">Разное</a></li>
-                                <li><a href="#">Художественная литература</a></li>
-                                <li><a href="#">Эзотерика, Религия, Оккультизм</a></li>
-                                <li><a href="#">Экономика, бизнес, финансы</a></li>
-                            </ul>
+    <main>
+        <div class="main-offset">
+            <section class="catalog">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 catalog-aside">
+                            <div class="catalog__inside">
+                                <h2 class="h3 col-title">Категории</h2>
+                                <ul class="menu-catalog">
+                                    <li>
+                                        <a href="#">Букинистическая книга
+                                            <div class="couneter-catalog"><span>+12</span></div>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">Дом. Досуг. Семья. Хобби</a></li>
+                                    <li><a href="#">Естественные науки</a></li>
+                                    <li>
+                                        <a href="#">Книги детям</a>
+                                    </li>
+                                    <li><a href="#">Компьютеры. Программирование и Cети</a></li>
+                                    <li>
+                                        <a href="#">Наука. Техника
+                                            <div class="couneter-catalog"><span>+5</span></div>
+                                        </a>
+                                    </li>
+                                    <li><a href="#">Нехудожественная литература</a></li>
+                                    <li><a href="#">Образование и учеба</a></li>
+                                    <li><a href="#">Разное</a></li>
+                                    <li><a href="#">Художественная литература</a></li>
+                                    <li><a href="#">Эзотерика, Религия, Оккультизм</a></li>
+                                    <li><a href="#">Экономика, бизнес, финансы</a></li>
+                                </ul>
 
-                            <ul class="aside-left-menu">
-                                <li><a href="#"> Акции и предложения</a></li>
-                                <li><a href="#">Клуб Путешественников</a></li>
-                                <li>
-                                    <a href="#">Лучшее - Детям</a>
-                                    <div class="aside-left-menu__counter"><span>+745</span></div>
-                                </li>
-                                <li><a href="#">Новые Поступления</a></li>
-                            </ul>
+                                <ul class="aside-left-menu">
+                                    <li><a href="#"> Акции и предложения</a></li>
+                                    <li><a href="#">Клуб Путешественников</a></li>
+                                    <li>
+                                        <a href="#">Лучшее - Детям</a>
+                                        <div class="aside-left-menu__counter"><span>+745</span></div>
+                                    </li>
+                                    <li><a href="#">Новые Поступления</a></li>
+                                </ul>
 
-                            <div class="accordion-criteries">
+                                <div class="accordion-criteries">
 
-                                <div class="accordion-outer">
-                                    <span class="anchor-title">Новинки по периодам</span>
-                                    <div class="accordion__item">
-                                        <label class="cat-check">
-                                            <input type="checkbox" value="1" name="week">
-                                            <span>за неделю</span>
-                                        </label>
-                                        <label class="cat-check">
-                                            <input type="checkbox" value="1" name="week">
-                                            <span>за месяц</span>
-                                        </label>
-                                        <label class="cat-check">
-                                            <input type="checkbox" value="1" name="week">
-                                            <span>за два месяца</span>
-                                        </label>
+                                    <div class="accordion-outer">
+                                        <span class="anchor-title">Новинки по периодам</span>
+                                        <div class="accordion__item">
+                                            <label class="cat-check">
+                                                <input type="checkbox" value="1" name="week">
+                                                <span>за неделю</span>
+                                            </label>
+                                            <label class="cat-check">
+                                                <input type="checkbox" value="1" name="week">
+                                                <span>за месяц</span>
+                                            </label>
+                                            <label class="cat-check">
+                                                <input type="checkbox" value="1" name="week">
+                                                <span>за два месяца</span>
+                                            </label>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="accordion-outer">
-                                    <a class="anchor-title" href="#">Рейтинг</a>
-                                    <div class="accordion__item">
+                                    <div class="accordion-outer">
+                                        <a class="anchor-title" href="#">Рейтинг</a>
+                                        <div class="accordion__item">
 
-                                        <label class="cat-check">
-                                            <input type="checkbox" value="1" name="week">
-                                            <span>за неделю</span>
-                                        </label>
-                                        <label class="cat-check">
-                                            <input type="checkbox" value="1" name="week">
-                                            <span>за месяц</span>
-                                        </label>
-                                        <label class="cat-check">
-                                            <input type="checkbox" value="1" name="week">
-                                            <span>за два месяца</span>
-                                        </label>
+                                            <label class="cat-check">
+                                                <input type="checkbox" value="1" name="week">
+                                                <span>за неделю</span>
+                                            </label>
+                                            <label class="cat-check">
+                                                <input type="checkbox" value="1" name="week">
+                                                <span>за месяц</span>
+                                            </label>
+                                            <label class="cat-check">
+                                                <input type="checkbox" value="1" name="week">
+                                                <span>за два месяца</span>
+                                            </label>
 
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="accordion-outer">
-                                    <span class="anchor-title">Цена</span>
-                                    <div class="accordion__item">
-                                        <div class="range_wrap">
-                                            <div class="priceRange_header">
+                                    <div class="accordion-outer">
+                                        <span class="anchor-title">Цена</span>
+                                        <div class="accordion__item">
+                                            <div class="range_wrap">
+                                                <div class="priceRange_header">
                                             <span class="left">
                                                 от
                                             </span>
-                                                <span class="right">
+                                                    <span class="right">
                                                 до
                                             </span>
-                                            </div>
-                                            <div class="rangesubmitRow clear_after">
-                                                <input type="text" class="numericInputs botPrice"  id="input-number-h" >
-                                                <span class="dash">—</span>
-                                                <input type="text" class="numericInputs botPrice"  id="input-number-l">
-                                                <span class="dash">гривен</span>
-                                            </div>
-                                            <div id="range">
+                                                </div>
+                                                <div class="rangesubmitRow clear_after">
+                                                    <input type="text" class="numericInputs botPrice"  id="input-number-h" >
+                                                    <span class="dash">—</span>
+                                                    <input type="text" class="numericInputs botPrice"  id="input-number-l">
+                                                    <span class="dash">гривен</span>
+                                                </div>
+                                                <div id="range">
 
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                <div class="accordion-outer">
-                                    <a class="anchor-title" href="#">Язык</a>
-                                    <div class="accordion__item">
+                                    <div class="accordion-outer">
+                                        <a class="anchor-title" href="#">Язык</a>
+                                        <div class="accordion__item">
 
-                                        <label class="cat-check">
-                                            <input type="checkbox" value="1" name="week">
-                                            <span>украинский</span>
-                                        </label>
-                                        <label class="cat-check">
-                                            <input type="checkbox" value="1" name="week">
-                                            <span>русский</span>
-                                        </label>
-                                        <label class="cat-check">
-                                            <input type="checkbox" value="1" name="week">
-                                            <span>английский</span>
-                                        </label>
+                                            <label class="cat-check">
+                                                <input type="checkbox" value="1" name="week">
+                                                <span>украинский</span>
+                                            </label>
+                                            <label class="cat-check">
+                                                <input type="checkbox" value="1" name="week">
+                                                <span>русский</span>
+                                            </label>
+                                            <label class="cat-check">
+                                                <input type="checkbox" value="1" name="week">
+                                                <span>английский</span>
+                                            </label>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="accordion-outer">
-                                    <a class="anchor-title" href="#">Год издания</a>
-                                    <div class="accordion__item">
+                                    <div class="accordion-outer">
+                                        <a class="anchor-title" href="#">Год издания</a>
+                                        <div class="accordion__item">
 
-                                        <label class="cat-check">
-                                            <input type="checkbox" value="1" name="week">
-                                            <span>2016</span>
-                                        </label>
-                                        <label class="cat-check">
-                                            <input type="checkbox" value="1" name="week">
-                                            <span>2015</span>
-                                        </label>
-                                        <label class="cat-check">
-                                            <input type="checkbox" value="1" name="week">
-                                            <span>2014</span>
-                                        </label>
-                                        <div class="look-more-years"> Смотреть больше</div>
+                                            <label class="cat-check">
+                                                <input type="checkbox" value="1" name="week">
+                                                <span>2016</span>
+                                            </label>
+                                            <label class="cat-check">
+                                                <input type="checkbox" value="1" name="week">
+                                                <span>2015</span>
+                                            </label>
+                                            <label class="cat-check">
+                                                <input type="checkbox" value="1" name="week">
+                                                <span>2014</span>
+                                            </label>
+                                            <div class="look-more-years"> Смотреть больше</div>
 
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="accordion-outer">
-                                    <a class="anchor-title" href="#">Переплет</a>
-                                    <div class="accordion__item">
+                                    <div class="accordion-outer">
+                                        <a class="anchor-title" href="#">Переплет</a>
+                                        <div class="accordion__item">
 
-                                        <label class="cat-check">
-                                            <input type="checkbox" value="1" name="week">
-                                            <span>за неделю</span>
-                                        </label>
-                                        <label class="cat-check">
-                                            <input type="checkbox" value="1" name="week">
-                                            <span>за месяц</span>
-                                        </label>
-                                        <label class="cat-check">
-                                            <input type="checkbox" value="1" name="week">
-                                            <span>за два месяца</span>
-                                        </label>
+                                            <label class="cat-check">
+                                                <input type="checkbox" value="1" name="week">
+                                                <span>за неделю</span>
+                                            </label>
+                                            <label class="cat-check">
+                                                <input type="checkbox" value="1" name="week">
+                                                <span>за месяц</span>
+                                            </label>
+                                            <label class="cat-check">
+                                                <input type="checkbox" value="1" name="week">
+                                                <span>за два месяца</span>
+                                            </label>
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <a class="mob-filter" href="javascript:;">
+                                <i class="icon icon-filter"></i>
+                            </a>
                         </div>
-                        <a class="mob-filter" href="javascript:;">
-                            <i class="icon icon-filter"></i>
-                        </a>
-                    </div>
-                    <div class="col-md-8">
-                        <div class="new-books">
-                            <h2 class="h3 col-title">Новинки</h2>
-                            <div class="news-container">
+                        <div class="col-md-8">
+                            <div class="new-books">
+                                <h2 class="h3 col-title">Новинки</h2>
+                                <div class="news-container">
 
                                     <div class="news__item">
                                         <div class="reccomends-picture">
@@ -481,7 +482,7 @@
                                         </div>
                                     </div>
 
-                                <div class="news__item">
+                                    <div class="news__item">
                                         <div class="reccomends-picture">
                                             <div class="discount">
                                                 <span>-50%</span>
@@ -685,753 +686,753 @@
                                             </div>
                                         </div>
                                     </div>
-                            </div>
-                        </div>
-                        
-                        <div class="banner-2 m-n-s">
-                            <a href="#">
-                                <img src="img/banner-2.png" alt="">
-                            </a>
-                        </div>
-
-                        <div class="popular">
-                            <h2 class="h3 col-title">Популярные книги</h2>
-                            <div class="popular-container">
-                                <div class="popular__item">
-                                    <a href="#">
-                                        <div class="reccomends-picture">
-                                            <div class="hit">
-                                                <span>Хит</span>
-                                            </div>
-                                            <img src="img/pop-b-9.png" alt="">
-                                        </div>
-                                    </a>
-                                    <div class="reccomends-text">
-                                        <div class="name">
-                                            Любовь. Секреты
-                                            разморозки
-                                        </div>
-                                        <div class="price">
-                                            <span>249</span>грн
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="popular__item">
-
-                                    <a href="#">
-                                        <div class="reccomends-picture">
-                                            <div class="hit">
-                                                <span>Хит</span>
-                                            </div>
-                                            <img src="img/pop-b-9.png" alt="">
-                                        </div>
-                                    </a>
-                                    <div class="reccomends-text">
-                                        <div class="name">
-                                            Любовь. Секреты
-                                            разморозки
-                                        </div>
-                                        <div class="price">
-                                            <span>249</span>грн
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="popular__item">
-
-                                    <a href="#">
-                                        <div class="reccomends-picture">
-                                            <div class="hit">
-                                                <span>Хит</span>
-                                            </div>
-                                            <img src="img/pop-b-9.png" alt="">
-                                        </div>
-                                    </a>
-                                    <div class="reccomends-text">
-                                        <div class="name">
-                                            Любовь. Секреты
-                                            разморозки
-                                        </div>
-                                        <div class="price">
-                                            <span>249</span>грн
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="popular__item">
-                                    <a href="#">
-                                        <div class="reccomends-picture">
-                                            <img src="img/pop-b-7.png" alt="">
-                                        </div>
-                                    </a>
-                                    <div class="reccomends-text">
-                                        <div class="name">
-                                            Любовь. Секреты
-                                            разморозки
-                                        </div>
-                                        <div class="price">
-                                            <span>249</span>грн
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="popular__item">
-                                    <a href="#">
-                                        <div class="reccomends-picture">
-                                            <img src="img/pop-b-6.png" alt="">
-                                        </div>
-                                    </a>
-                                    <div class="reccomends-text">
-                                        <div class="name">
-                                            Любовь. Секреты
-                                            разморозки
-                                        </div>
-                                        <div class="price">
-                                            <span>249</span>грн
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="popular__item">
-                                    <a href="#">
-                                        <div class="reccomends-picture">
-                                            <div class="hit">
-                                                <span>Хит</span>
-                                            </div>
-                                            <img src="img/pop-b-4.png" alt="">
-                                        </div>
-                                    </a>
-                                    <div class="reccomends-text">
-                                        <div class="name">
-                                            Любовь. Секреты
-                                            разморозки
-                                        </div>
-                                        <div class="price">
-                                            <span>249</span>грн
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="popular__item">
-                                    <a href="#">
-                                        <div class="reccomends-picture">
-                                            <div class="hit">
-                                                <span>Хит</span>
-                                            </div>
-                                            <img src="img/pop-b-3.png" alt="">
-                                        </div>
-                                    </a>
-                                    <div class="reccomends-text">
-                                        <div class="name">
-                                            Любовь. Секреты
-                                            разморозки
-                                        </div>
-                                        <div class="price">
-                                            <span>249</span>грн
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="popular__item">
-                                    <a href="#">
-                                        <div class="reccomends-picture">
-                                            <div class="hit">
-                                                <span>Хит</span>
-                                            </div>
-                                            <img src="img/pop-b-1.png" alt="">
-                                        </div>
-                                    </a>
-                                    <div class="reccomends-text">
-                                        <div class="name">
-                                            Любовь. Секреты
-                                            разморозки
-                                        </div>
-                                        <div class="price">
-                                            <span>249</span>грн
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="popular__item">
-
-                                    <a href="#">
-                                        <div class="reccomends-picture">
-                                            <img src="img/pop-b-2.png" alt="">
-                                        </div>
-                                    </a>
-                                    <div class="reccomends-text">
-                                        <div class="name">
-                                            Любовь. Секреты
-                                            разморозки
-                                        </div>
-                                        <div class="price">
-                                            <span>249</span>грн
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="popular__item">
-                                    <a href="#">
-                                        <div class="reccomends-picture">
-                                            <img src="img/pop-b-2.png" alt="">
-                                        </div>
-                                    </a>
-                                    <div class="reccomends-text">
-                                        <div class="name">
-                                            Любовь. Секреты
-                                            разморозки
-                                        </div>
-                                        <div class="price">
-                                            <span>249</span>грн
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="popular__item">
-                                    <a href="#">
-                                        <div class="reccomends-picture">
-                                            <img src="img/pop-b-2.png" alt="">
-                                        </div>
-                                    </a>
-
-                                    <div class="reccomends-text">
-                                        <div class="name">
-                                            Любовь. Секреты
-                                            разморозки
-                                        </div>
-                                        <div class="price">
-                                            <span>249</span>грн
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="popular__item">
-                                    <a href="#">
-                                        <div class="reccomends-picture">
-                                            <img src="img/pop-b-2.png" alt="">
-                                        </div>
-                                    </a>
-
-                                    <div class="reccomends-text">
-                                        <div class="name">
-                                            Любовь. Секреты
-                                            разморозки
-                                        </div>
-                                        <div class="price">
-                                            <span>249</span>грн
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <div class="pagination">
-                            <ul>
-                                <li class="first">
-                                    <a href="javascript:;" rel="prev"><</a>
+                            <div class="banner-2 m-n-s">
+                                <a href="#">
+                                    <img src="img/banner-2.png" alt="">
+                                </a>
+                            </div>
+
+                            <div class="popular">
+                                <h2 class="h3 col-title">Популярные книги</h2>
+                                <div class="popular-container">
+                                    <div class="popular__item">
+                                        <a href="#">
+                                            <div class="reccomends-picture">
+                                                <div class="hit">
+                                                    <span>Хит</span>
+                                                </div>
+                                                <img src="img/pop-b-9.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="reccomends-text">
+                                            <div class="name">
+                                                Любовь. Секреты
+                                                разморозки
+                                            </div>
+                                            <div class="price">
+                                                <span>249</span>грн
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular__item">
+
+                                        <a href="#">
+                                            <div class="reccomends-picture">
+                                                <div class="hit">
+                                                    <span>Хит</span>
+                                                </div>
+                                                <img src="img/pop-b-9.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="reccomends-text">
+                                            <div class="name">
+                                                Любовь. Секреты
+                                                разморозки
+                                            </div>
+                                            <div class="price">
+                                                <span>249</span>грн
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular__item">
+
+                                        <a href="#">
+                                            <div class="reccomends-picture">
+                                                <div class="hit">
+                                                    <span>Хит</span>
+                                                </div>
+                                                <img src="img/pop-b-9.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="reccomends-text">
+                                            <div class="name">
+                                                Любовь. Секреты
+                                                разморозки
+                                            </div>
+                                            <div class="price">
+                                                <span>249</span>грн
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular__item">
+                                        <a href="#">
+                                            <div class="reccomends-picture">
+                                                <img src="img/pop-b-7.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="reccomends-text">
+                                            <div class="name">
+                                                Любовь. Секреты
+                                                разморозки
+                                            </div>
+                                            <div class="price">
+                                                <span>249</span>грн
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular__item">
+                                        <a href="#">
+                                            <div class="reccomends-picture">
+                                                <img src="img/pop-b-6.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="reccomends-text">
+                                            <div class="name">
+                                                Любовь. Секреты
+                                                разморозки
+                                            </div>
+                                            <div class="price">
+                                                <span>249</span>грн
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular__item">
+                                        <a href="#">
+                                            <div class="reccomends-picture">
+                                                <div class="hit">
+                                                    <span>Хит</span>
+                                                </div>
+                                                <img src="img/pop-b-4.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="reccomends-text">
+                                            <div class="name">
+                                                Любовь. Секреты
+                                                разморозки
+                                            </div>
+                                            <div class="price">
+                                                <span>249</span>грн
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular__item">
+                                        <a href="#">
+                                            <div class="reccomends-picture">
+                                                <div class="hit">
+                                                    <span>Хит</span>
+                                                </div>
+                                                <img src="img/pop-b-3.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="reccomends-text">
+                                            <div class="name">
+                                                Любовь. Секреты
+                                                разморозки
+                                            </div>
+                                            <div class="price">
+                                                <span>249</span>грн
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular__item">
+                                        <a href="#">
+                                            <div class="reccomends-picture">
+                                                <div class="hit">
+                                                    <span>Хит</span>
+                                                </div>
+                                                <img src="img/pop-b-1.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="reccomends-text">
+                                            <div class="name">
+                                                Любовь. Секреты
+                                                разморозки
+                                            </div>
+                                            <div class="price">
+                                                <span>249</span>грн
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular__item">
+
+                                        <a href="#">
+                                            <div class="reccomends-picture">
+                                                <img src="img/pop-b-2.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="reccomends-text">
+                                            <div class="name">
+                                                Любовь. Секреты
+                                                разморозки
+                                            </div>
+                                            <div class="price">
+                                                <span>249</span>грн
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular__item">
+                                        <a href="#">
+                                            <div class="reccomends-picture">
+                                                <img src="img/pop-b-2.png" alt="">
+                                            </div>
+                                        </a>
+                                        <div class="reccomends-text">
+                                            <div class="name">
+                                                Любовь. Секреты
+                                                разморозки
+                                            </div>
+                                            <div class="price">
+                                                <span>249</span>грн
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular__item">
+                                        <a href="#">
+                                            <div class="reccomends-picture">
+                                                <img src="img/pop-b-2.png" alt="">
+                                            </div>
+                                        </a>
+
+                                        <div class="reccomends-text">
+                                            <div class="name">
+                                                Любовь. Секреты
+                                                разморозки
+                                            </div>
+                                            <div class="price">
+                                                <span>249</span>грн
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="popular__item">
+                                        <a href="#">
+                                            <div class="reccomends-picture">
+                                                <img src="img/pop-b-2.png" alt="">
+                                            </div>
+                                        </a>
+
+                                        <div class="reccomends-text">
+                                            <div class="name">
+                                                Любовь. Секреты
+                                                разморозки
+                                            </div>
+                                            <div class="price">
+                                                <span>249</span>грн
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="pagination">
+                                <ul>
+                                    <li class="first">
+                                        <a href="javascript:;" rel="prev"><</a>
+                                    </li>
+                                    <li class="active"><span>1</span></li>
+                                    <li><a href="javascript:;"><span>2</span></a></li>
+                                    <li><a href="javascript:;"><span>3</span></a></li>
+                                    <li><a href="javascript:;"><span>4</span></a></li>
+                                    <li><a href="javascript:;"><span>5</span></a></li>
+                                    <li><a href="javascript:;"><span>6</span></a></li>
+                                    <li><a href="javascript:;"><span>7</span></a></li>
+                                    <li><a href="javascript:;"><span>8</span></a></li>
+                                    <li><a href="javascript:;"><span>9</span></a></li>
+
+                                    <li class="last">
+                                        <a href="javascript:;" rel="next">></a>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="reviews">
+                <h2 class="h2">
+                    Отзывы о магазине
+                </h2>
+                <div class="container">
+                    <div class="items-reviews-wrap wrap js-reviews">
+                        <div class="scrollbar">
+                            <div class="handle" >
+                                <div class="mousearea"></div>
+                            </div>
+                        </div>
+                        <div class="frame" id="basic">
+
+                            <ul class="clearfix" >
+                                <li class="col-inline-4">
+                                    <div class="review-item">
+                                        <div class="header-review">
+                                            <div class="header-review__left">
+                                                <img src="img/rewiev-1.jpg" alt="">
+                                            </div>
+                                            <div class="header-review__top">
+                                                <h4 class="h3">Валерия Юговая</h4>
+                                                <div class="stars">
+                                                    <div class="ui star rating" data-rating="3">
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="body-review">
+                                            <p class="text">
+                                                Заказывала в субботу, пришла книга во вторник по Новой Почте. Очень приятная на ощупь с тонкими, но плотными страницами. Стандартный шрифт на русском языке. Бесплатная закладка, удобно)) Книга завораживающая, как раз по ней и вышел фильм "До встречи с тобой". Советую всем прочитать книгу и посмотреть экранизацию. Идеальная работа)
+                                            </p>
+                                        </div>
+                                        <div class="footer-review">
+                                            <div class="review-question middle ">
+                                                <span>Полезный отзыв?</span>
+                                            </div>
+                                            <div class="vote middle">
+                                                <button class="vote-but vote__yes"><i class="icon middle icon-yes"></i><span class="middle">18</span></button>
+                                                <button class="vote-but vote__no"><i class="icon middle icon-no"></i><span class="middle">3</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
-                                <li class="active"><span>1</span></li>
-                                <li><a href="javascript:;"><span>2</span></a></li>
-                                <li><a href="javascript:;"><span>3</span></a></li>
-                                <li><a href="javascript:;"><span>4</span></a></li>
-                                <li><a href="javascript:;"><span>5</span></a></li>
-                                <li><a href="javascript:;"><span>6</span></a></li>
-                                <li><a href="javascript:;"><span>7</span></a></li>
-                                <li><a href="javascript:;"><span>8</span></a></li>
-                                <li><a href="javascript:;"><span>9</span></a></li>
 
-                                <li class="last">
-                                    <a href="javascript:;" rel="next">></a>
+                                <li class="col-inline-4">
+                                    <div class="review-item">
+                                        <div class="header-review">
+                                            <div class="header-review__left">
+                                                <img src="img/rewiev-1.jpg" alt="">
+                                            </div>
+                                            <div class="header-review__top">
+                                                <h4 class="h3">Валерия Юговая</h4>
+                                                <div class="stars">
+                                                    <div class="ui star rating" data-rating="3">
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="body-review">
+                                            <p class="text">
+                                                Заказывала в субботу, пришла книга во вторник по Новой Почте. Очень приятная на ощупь с тонкими, но плотными страницами. Стандартный шрифт на русском языке. Бесплатная закладка, удобно)) Книга завораживающая, как раз по ней и вышел фильм "До встречи с тобой". Советую всем прочитать книгу и посмотреть экранизацию. Идеальная работа)
+                                            </p>
+                                        </div>
+                                        <div class="footer-review">
+                                            <div class="review-question middle ">
+                                                <span>Полезный отзыв?</span>
+                                            </div>
+                                            <div class="vote middle">
+                                                <button class="vote-but vote__yes"><i class="icon middle icon-yes"></i><span class="middle">18</span></button>
+                                                <button class="vote-but vote__no"><i class="icon middle icon-no"></i><span class="middle">3</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-inline-4">
+                                    <div class="review-item">
+                                        <div class="header-review">
+                                            <div class="header-review__left">
+                                                <img src="img/rewiev-1.jpg" alt="">
+                                            </div>
+                                            <div class="header-review__top">
+                                                <h4 class="h3">Валерия Юговая</h4>
+                                                <div class="stars">
+                                                    <div class="ui star rating" data-rating="3">
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="body-review">
+                                            <p class="text">
+                                                Заказывала в субботу, пришла книга во вторник по Новой Почте. Очень приятная на ощупь с тонкими, но плотными страницами. Стандартный шрифт на русском языке. Бесплатная закладка, удобно)) Книга завораживающая, как раз по ней и вышел фильм "До встречи с тобой". Советую всем прочитать книгу и посмотреть экранизацию. Идеальная работа)
+                                            </p>
+                                        </div>
+                                        <div class="footer-review">
+                                            <div class="review-question middle ">
+                                                <span>Полезный отзыв?</span>
+                                            </div>
+                                            <div class="vote middle">
+                                                <button class="vote-but vote__yes"><i class="icon middle icon-yes"></i><span class="middle">18</span></button>
+                                                <button class="vote-but vote__no"><i class="icon middle icon-no"></i><span class="middle">3</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="col-inline-4">
+                                    <div class="review-item">
+                                        <div class="header-review">
+                                            <div class="header-review__left">
+                                                <img src="img/rewiev-1.jpg" alt="">
+                                            </div>
+                                            <div class="header-review__top">
+                                                <h4 class="h3">Валерия Юговая</h4>
+                                                <div class="stars">
+                                                    <div class="ui star rating" data-rating="3">
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="body-review">
+                                            <p class="text">
+                                                Заказывала в субботу, пришла книга во вторник по Новой Почте. Очень приятная на ощупь с тонкими, но плотными страницами. Стандартный шрифт на русском языке. Бесплатная закладка, удобно)) Книга завораживающая, как раз по ней и вышел фильм "До встречи с тобой". Советую всем прочитать книгу и посмотреть экранизацию. Идеальная работа)
+                                            </p>
+                                        </div>
+                                        <div class="footer-review">
+                                            <div class="review-question middle ">
+                                                <span>Полезный отзыв?</span>
+                                            </div>
+                                            <div class="vote middle">
+                                                <button class="vote-but vote__yes"><i class="icon middle icon-yes"></i><span class="middle">18</span></button>
+                                                <button class="vote-but vote__no"><i class="icon middle icon-no"></i><span class="middle">3</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="col-inline-4">
+                                    <div class="review-item">
+                                        <div class="header-review">
+                                            <div class="header-review__left">
+                                                <img src="img/rewiev-1.jpg" alt="">
+                                            </div>
+                                            <div class="header-review__top">
+                                                <h4 class="h3">Валерия Юговая</h4>
+                                                <div class="stars">
+                                                    <div class="ui star rating" data-rating="3">
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="body-review">
+                                            <p class="text">
+                                                Заказывала в субботу, пришла книга во вторник по Новой Почте. Очень приятная на ощупь с тонкими, но плотными страницами. Стандартный шрифт на русском языке. Бесплатная закладка, удобно)) Книга завораживающая, как раз по ней и вышел фильм "До встречи с тобой". Советую всем прочитать книгу и посмотреть экранизацию. Идеальная работа)
+                                            </p>
+                                        </div>
+                                        <div class="footer-review">
+                                            <div class="review-question middle ">
+                                                <span>Полезный отзыв?</span>
+                                            </div>
+                                            <div class="vote middle">
+                                                <button class="vote-but vote__yes"><i class="icon middle icon-yes"></i><span class="middle">18</span></button>
+                                                <button class="vote-but vote__no"><i class="icon middle icon-no"></i><span class="middle">3</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="col-inline-4">
+                                    <div class="review-item">
+                                        <div class="header-review">
+                                            <div class="header-review__left">
+                                                <img src="img/rewiev-1.jpg" alt="">
+                                            </div>
+                                            <div class="header-review__top">
+                                                <h4 class="h3">Валерия Юговая</h4>
+                                                <div class="stars">
+                                                    <div class="ui star rating" data-rating="3">
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="body-review">
+                                            <p class="text">
+                                                Заказывала в субботу, пришла книга во вторник по Новой Почте. Очень приятная на ощупь с тонкими, но плотными страницами. Стандартный шрифт на русском языке. Бесплатная закладка, удобно)) Книга завораживающая, как раз по ней и вышел фильм "До встречи с тобой". Советую всем прочитать книгу и посмотреть экранизацию. Идеальная работа)
+                                            </p>
+                                        </div>
+                                        <div class="footer-review">
+                                            <div class="review-question middle ">
+                                                <span>Полезный отзыв?</span>
+                                            </div>
+                                            <div class="vote middle">
+                                                <button class="vote-but vote__yes"><i class="icon middle icon-yes"></i><span class="middle">18</span></button>
+                                                <button class="vote-but vote__no"><i class="icon middle icon-no"></i><span class="middle">3</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="col-inline-4">
+                                    <div class="review-item">
+                                        <div class="header-review">
+                                            <div class="header-review__left">
+                                                <img src="img/rewiev-1.jpg" alt="">
+                                            </div>
+                                            <div class="header-review__top">
+                                                <h4 class="h3">Валерия Юговая</h4>
+                                                <div class="stars">
+                                                    <div class="ui star rating" data-rating="3">
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="body-review">
+                                            <p class="text">
+                                                Заказывала в субботу, пришла книга во вторник по Новой Почте. Очень приятная на ощупь с тонкими, но плотными страницами. Стандартный шрифт на русском языке. Бесплатная закладка, удобно)) Книга завораживающая, как раз по ней и вышел фильм "До встречи с тобой". Советую всем прочитать книгу и посмотреть экранизацию. Идеальная работа)
+                                            </p>
+                                        </div>
+                                        <div class="footer-review">
+                                            <div class="review-question middle ">
+                                                <span>Полезный отзыв?</span>
+                                            </div>
+                                            <div class="vote middle">
+                                                <button class="vote-but vote__yes"><i class="icon middle icon-yes"></i><span class="middle">18</span></button>
+                                                <button class="vote-but vote__no"><i class="icon middle icon-no"></i><span class="middle">3</span></button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="registration-block">
+                <div class="continer">
+                    <div class="registration-block__info">
+                        <h2 class="h2 registration-block__title">Зарегистрируйтесь чтобы написать свой отзыв</h2>
+                        <div class="registration-block__text">Написание отзывов и обзоров, история покупок, специальные предложения и др. — доступны
+                            только зарегистрированым пользователям
+                        </div>
+                        <button class="button">Регистрация</button>
+                    </div>
+                </div>
+            </section>
+            <section class="iformation-section">
+                <div class="container">
+                    <div class="overviews__header">
+                        <h2 class="h2">Обзоры</h2>
+                        <div class="overviews-header-right">
+                            <span>Показать:</span>
+                            <div class="show-select-container">
+                                <div class="ui dropdown show-select" tabindex="0">
+                                    <input type="hidden" name="">
+                                    <i class="dropdown-icon"></i>
+                                    <div class="default text">Сначала новые</div>
+                                    <div class="menu" tabindex="-1">
+                                        <div class="item" data-value="female">Сначала новые</div>
+                                        <div class="item" data-value="female-2">Все</div>
+                                        <div class="item" data-value="female-3">Популярные</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <div class="overviews">
 
+                                <div class="overviews__body">
+
+                                    <div class="overview-item">
+                                        <div class="overview-item__right-block">
+                                            <div class="overview-item-picture">
+                                                <img src="img/review-1.png" alt="">
+                                            </div>
+                                            <div class="name">
+                                                <h4 class="name-book">Big magic</h4>
+                                                <span class="author">Elizabeth Gilbert</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-item__left-block">
+                                            <div class="overview-item__user">
+                                                <img src="img/rewiev-2.jpg" alt="">
+                                                <h4 class="user-nane">Катерина Лебедева</h4>
+                                                <div class="stars">
+                                                    <div class="ui star rating" data-rating="3">
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="revier__text text">
+                                                    <p>Все же интересно прочитать о себе, причем не в гороскопе или в результатах сомнительного теста. Также полезно узнать объективную оценку характеров людей, с которыми приходится взаимодействовать по жизни. Однако по стилю изложения, хоть в целом и вполне научно-популярному, все же книга, рассчитанная не только "для родителей", могла бы быть более сжатой и прагматичной. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="overview-item">
+                                        <div class="overview-item__right-block">
+                                            <div class="overview-item-picture">
+                                                <img src="img/review-2.png" alt="">
+                                            </div>
+                                            <div class="name">
+                                                <h4 class="name-book">Big magic</h4>
+                                                <span class="author">Elizabeth Gilbert</span>
+                                            </div>
+                                        </div>
+                                        <div class="overview-item__left-block">
+                                            <div class="overview-item__user">
+                                                <img src="img/rewiev-2.jpg" alt="">
+                                                <h4 class="user-nane">Катерина Лебедева</h4>
+                                                <div class="stars">
+                                                    <div class="ui star rating" data-rating="3">
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                        <i class="icon active"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="revier__text text">
+                                                    <p>Середина романа — 29 глава — именно с неё стоит начинать, ведь она суть сотворение мира. И я даже подозреваю, что роман задумывался с неё — так ярок этот эпизод, когда главный герой лингвист и философ Адриа Ардевол-и-Боск получает в свое полное владение родительскую квартиру и наконец может распоряжаться и ей, и своей жизнью, как ему вздумается — вот он и создает свою Вселенную: расставляет бесчисленные книги на полках шкафов в разных комнатах.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="overviews__footer">
+                                    <div class="reg-warning"><span>Для написания обзоров нужно зарегистрироваться</span></div>
+                                    <button class="button">Регистрация</button>
+                                    <button class="tr-button gray-but">Открыть все обзоры</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-4 col-xs-12">
+                            <aside class="left-sidebar news">
+                                <h2 class="h2">Новости</h2>
+
+                                <div class="news__anouns">
+                                    <time class="time">28 сентября 2016</time>
+                                    <h3 class="h3">Анонс новых книг 2017 года</h3>
+                                    <div class="announce-text">
+                                        <p>Все же интересно прочитать о себе, причем не в гороскопе или в результатах
+                                            сомнительного теста. Также полезно узнать объективную оценку характеров людей, с
+                                            которыми </p>
+                                    </div>
+                                </div>
+
+                                <div class="news__anouns">
+                                    <time class="time">28 сентября 2016</time>
+                                    <h3 class="h3">Анонс новых книг 2017 года</h3>
+                                    <div class="announce-text">
+                                        <p>Все же интересно прочитать о себе, причем не в гороскопе или в результатах
+                                            сомнительного теста. Также полезно узнать объективную оценку характеров людей, с
+                                            которыми </p>
+                                    </div>
+                                </div>
+
+                                <div class="news__anouns">
+                                    <time class="time">28 сентября 2016</time>
+                                    <h3 class="h3">Анонс новых книг 2017 года</h3>
+                                    <div class="announce-text">
+                                        <p>Все же интересно прочитать о себе, причем не в гороскопе или в результатах
+                                            сомнительного теста. Также полезно узнать объективную оценку характеров людей, с
+                                            которыми </p>
+                                    </div>
+                                </div>
+
+                                <div class="news__anouns">
+                                    <time class="time">28 сентября 2016</time>
+                                    <h3 class="h3">Анонс новых книг 2017 года</h3>
+                                    <div class="announce-text">
+                                        <p>Все же интересно прочитать о себе, причем не в гороскопе или в результатах
+                                            сомнительного теста. Также полезно узнать объективную оценку характеров людей, с
+                                            которыми </p>
+                                    </div>
+                                </div>
+                                <div class="news-but-wrap">
+                                    <button class="tr-button gray-but">Открыть все новости</button>
+                                </div>
+
+
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="advances">
+                <div class="container">
+                    <div class="avances__wrap">
+
+                        <div class="adv-item">
+                            <div class="adv-item-pic">
+                                <i class="icon icon-shape-1"></i>
+                            </div>
+                            <div class="adv-item-text">
+                                40000 книг в наличии
+                            </div>
+                        </div>
+
+                        <div class="adv-item">
+                            <div class="adv-item-pic">
+                                <i class="icon icon-shape-2"></i>
+                            </div>
+                            <div class="adv-item-text">
+                                Постоянные пополнения
+                            </div>
+                        </div>
+
+                        <div class="adv-item">
+                            <div class="adv-item-pic">
+                                <i class="icon icon-shape-3"></i>
+                            </div>
+                            <div class="adv-item-text">
+                                Безналичный расчет
+                            </div>
+                        </div>
+
+                        <div class="adv-item">
+                            <div class="adv-item-pic">
+                                <i class="icon icon-shape-4"></i>
+                            </div>
+                            <div class="adv-item-text">
+                                Доставка курьером
+                            </div>
+                        </div>
+
+                        <div class="adv-item">
+                            <div class="adv-item-pic">
+                                <i class="icon icon-shape-5"></i>
+                            </div>
+                            <div class="adv-item-text">
+                                Низкие цены
+                            </div>
                         </div>
 
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="reviews">
-            <h2 class="h2">
-                Отзывы о магазине
-            </h2>
-            <div class="container">
-                <div class="items-reviews-wrap wrap js-reviews">
-                    <div class="scrollbar">
-                        <div class="handle" >
-                            <div class="mousearea"></div>
-                        </div>
-                    </div>
-                    <div class="frame" id="basic">
-
-                        <ul class="clearfix" >
-                            <li class="col-inline-4">
-                                <div class="review-item">
-                                    <div class="header-review">
-                                        <div class="header-review__left">
-                                            <img src="img/rewiev-1.jpg" alt="">
-                                        </div>
-                                        <div class="header-review__top">
-                                            <h4 class="h3">Валерия Юговая</h4>
-                                            <div class="stars">
-                                                <div class="ui star rating" data-rating="3">
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="body-review">
-                                        <p class="text">
-                                            Заказывала в субботу, пришла книга во вторник по Новой Почте. Очень приятная на ощупь с тонкими, но плотными страницами. Стандартный шрифт на русском языке. Бесплатная закладка, удобно)) Книга завораживающая, как раз по ней и вышел фильм "До встречи с тобой". Советую всем прочитать книгу и посмотреть экранизацию. Идеальная работа)
-                                        </p>
-                                    </div>
-                                    <div class="footer-review">
-                                        <div class="review-question middle ">
-                                            <span>Полезный отзыв?</span>
-                                        </div>
-                                        <div class="vote middle">
-                                            <button class="vote-but vote__yes"><i class="icon middle icon-yes"></i><span class="middle">18</span></button>
-                                            <button class="vote-but vote__no"><i class="icon middle icon-no"></i><span class="middle">3</span></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="col-inline-4">
-                                <div class="review-item">
-                                    <div class="header-review">
-                                        <div class="header-review__left">
-                                            <img src="img/rewiev-1.jpg" alt="">
-                                        </div>
-                                        <div class="header-review__top">
-                                            <h4 class="h3">Валерия Юговая</h4>
-                                            <div class="stars">
-                                                <div class="ui star rating" data-rating="3">
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="body-review">
-                                        <p class="text">
-                                            Заказывала в субботу, пришла книга во вторник по Новой Почте. Очень приятная на ощупь с тонкими, но плотными страницами. Стандартный шрифт на русском языке. Бесплатная закладка, удобно)) Книга завораживающая, как раз по ней и вышел фильм "До встречи с тобой". Советую всем прочитать книгу и посмотреть экранизацию. Идеальная работа)
-                                        </p>
-                                    </div>
-                                    <div class="footer-review">
-                                        <div class="review-question middle ">
-                                            <span>Полезный отзыв?</span>
-                                        </div>
-                                        <div class="vote middle">
-                                            <button class="vote-but vote__yes"><i class="icon middle icon-yes"></i><span class="middle">18</span></button>
-                                            <button class="vote-but vote__no"><i class="icon middle icon-no"></i><span class="middle">3</span></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-inline-4">
-                                <div class="review-item">
-                                    <div class="header-review">
-                                        <div class="header-review__left">
-                                            <img src="img/rewiev-1.jpg" alt="">
-                                        </div>
-                                        <div class="header-review__top">
-                                            <h4 class="h3">Валерия Юговая</h4>
-                                            <div class="stars">
-                                                <div class="ui star rating" data-rating="3">
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="body-review">
-                                        <p class="text">
-                                            Заказывала в субботу, пришла книга во вторник по Новой Почте. Очень приятная на ощупь с тонкими, но плотными страницами. Стандартный шрифт на русском языке. Бесплатная закладка, удобно)) Книга завораживающая, как раз по ней и вышел фильм "До встречи с тобой". Советую всем прочитать книгу и посмотреть экранизацию. Идеальная работа)
-                                        </p>
-                                    </div>
-                                    <div class="footer-review">
-                                        <div class="review-question middle ">
-                                            <span>Полезный отзыв?</span>
-                                        </div>
-                                        <div class="vote middle">
-                                            <button class="vote-but vote__yes"><i class="icon middle icon-yes"></i><span class="middle">18</span></button>
-                                            <button class="vote-but vote__no"><i class="icon middle icon-no"></i><span class="middle">3</span></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="col-inline-4">
-                                <div class="review-item">
-                                    <div class="header-review">
-                                        <div class="header-review__left">
-                                            <img src="img/rewiev-1.jpg" alt="">
-                                        </div>
-                                        <div class="header-review__top">
-                                            <h4 class="h3">Валерия Юговая</h4>
-                                            <div class="stars">
-                                                <div class="ui star rating" data-rating="3">
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="body-review">
-                                        <p class="text">
-                                            Заказывала в субботу, пришла книга во вторник по Новой Почте. Очень приятная на ощупь с тонкими, но плотными страницами. Стандартный шрифт на русском языке. Бесплатная закладка, удобно)) Книга завораживающая, как раз по ней и вышел фильм "До встречи с тобой". Советую всем прочитать книгу и посмотреть экранизацию. Идеальная работа)
-                                        </p>
-                                    </div>
-                                    <div class="footer-review">
-                                        <div class="review-question middle ">
-                                            <span>Полезный отзыв?</span>
-                                        </div>
-                                        <div class="vote middle">
-                                            <button class="vote-but vote__yes"><i class="icon middle icon-yes"></i><span class="middle">18</span></button>
-                                            <button class="vote-but vote__no"><i class="icon middle icon-no"></i><span class="middle">3</span></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="col-inline-4">
-                                <div class="review-item">
-                                    <div class="header-review">
-                                        <div class="header-review__left">
-                                            <img src="img/rewiev-1.jpg" alt="">
-                                        </div>
-                                        <div class="header-review__top">
-                                            <h4 class="h3">Валерия Юговая</h4>
-                                            <div class="stars">
-                                                <div class="ui star rating" data-rating="3">
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="body-review">
-                                        <p class="text">
-                                            Заказывала в субботу, пришла книга во вторник по Новой Почте. Очень приятная на ощупь с тонкими, но плотными страницами. Стандартный шрифт на русском языке. Бесплатная закладка, удобно)) Книга завораживающая, как раз по ней и вышел фильм "До встречи с тобой". Советую всем прочитать книгу и посмотреть экранизацию. Идеальная работа)
-                                        </p>
-                                    </div>
-                                    <div class="footer-review">
-                                        <div class="review-question middle ">
-                                            <span>Полезный отзыв?</span>
-                                        </div>
-                                        <div class="vote middle">
-                                            <button class="vote-but vote__yes"><i class="icon middle icon-yes"></i><span class="middle">18</span></button>
-                                            <button class="vote-but vote__no"><i class="icon middle icon-no"></i><span class="middle">3</span></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="col-inline-4">
-                                <div class="review-item">
-                                    <div class="header-review">
-                                        <div class="header-review__left">
-                                            <img src="img/rewiev-1.jpg" alt="">
-                                        </div>
-                                        <div class="header-review__top">
-                                            <h4 class="h3">Валерия Юговая</h4>
-                                            <div class="stars">
-                                                <div class="ui star rating" data-rating="3">
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="body-review">
-                                        <p class="text">
-                                            Заказывала в субботу, пришла книга во вторник по Новой Почте. Очень приятная на ощупь с тонкими, но плотными страницами. Стандартный шрифт на русском языке. Бесплатная закладка, удобно)) Книга завораживающая, как раз по ней и вышел фильм "До встречи с тобой". Советую всем прочитать книгу и посмотреть экранизацию. Идеальная работа)
-                                        </p>
-                                    </div>
-                                    <div class="footer-review">
-                                        <div class="review-question middle ">
-                                            <span>Полезный отзыв?</span>
-                                        </div>
-                                        <div class="vote middle">
-                                            <button class="vote-but vote__yes"><i class="icon middle icon-yes"></i><span class="middle">18</span></button>
-                                            <button class="vote-but vote__no"><i class="icon middle icon-no"></i><span class="middle">3</span></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <li class="col-inline-4">
-                                <div class="review-item">
-                                    <div class="header-review">
-                                        <div class="header-review__left">
-                                            <img src="img/rewiev-1.jpg" alt="">
-                                        </div>
-                                        <div class="header-review__top">
-                                            <h4 class="h3">Валерия Юговая</h4>
-                                            <div class="stars">
-                                                <div class="ui star rating" data-rating="3">
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="body-review">
-                                        <p class="text">
-                                            Заказывала в субботу, пришла книга во вторник по Новой Почте. Очень приятная на ощупь с тонкими, но плотными страницами. Стандартный шрифт на русском языке. Бесплатная закладка, удобно)) Книга завораживающая, как раз по ней и вышел фильм "До встречи с тобой". Советую всем прочитать книгу и посмотреть экранизацию. Идеальная работа)
-                                        </p>
-                                    </div>
-                                    <div class="footer-review">
-                                        <div class="review-question middle ">
-                                            <span>Полезный отзыв?</span>
-                                        </div>
-                                        <div class="vote middle">
-                                            <button class="vote-but vote__yes"><i class="icon middle icon-yes"></i><span class="middle">18</span></button>
-                                            <button class="vote-but vote__no"><i class="icon middle icon-no"></i><span class="middle">3</span></button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="registration-block">
-            <div class="continer">
-                <div class="registration-block__info">
-                    <h2 class="h2 registration-block__title">Зарегистрируйтесь чтобы написать свой отзыв</h2>
-                    <div class="registration-block__text">Написание отзывов и обзоров, история покупок, специальные предложения и др. — доступны
-                        только зарегистрированым пользователям
-                    </div>
-                    <button class="button">Регистрация</button>
-                </div>
-            </div>
-        </section>
-        <section class="iformation-section">
-            <div class="container">
-                <div class="overviews__header">
-                    <h2 class="h2">Обзоры</h2>
-                    <div class="overviews-header-right">
-                        <span>Показать:</span>
-                        <div class="show-select-container">
-                            <div class="ui dropdown show-select" tabindex="0">
-                                <input type="hidden" name="">
-                                <i class="dropdown-icon"></i>
-                                <div class="default text">Сначала новые</div>
-                                <div class="menu" tabindex="-1">
-                                    <div class="item" data-value="female">Сначала новые</div>
-                                    <div class="item" data-value="female-2">Все</div>
-                                    <div class="item" data-value="female-3">Популярные</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-8 col-sm-8 col-xs-12">
-                        <div class="overviews">
-
-                            <div class="overviews__body">
-
-                                <div class="overview-item">
-                                    <div class="overview-item__right-block">
-                                        <div class="overview-item-picture">
-                                            <img src="img/review-1.png" alt="">
-                                        </div>
-                                        <div class="name">
-                                            <h4 class="name-book">Big magic</h4>
-                                            <span class="author">Elizabeth Gilbert</span>
-                                        </div>
-                                    </div>
-                                    <div class="overview-item__left-block">
-                                        <div class="overview-item__user">
-                                            <img src="img/rewiev-2.jpg" alt="">
-                                            <h4 class="user-nane">Катерина Лебедева</h4>
-                                            <div class="stars">
-                                                <div class="ui star rating" data-rating="3">
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                </div>
-                                            </div>
-                                            <div class="revier__text text">
-                                                <p>Все же интересно прочитать о себе, причем не в гороскопе или в результатах сомнительного теста. Также полезно узнать объективную оценку характеров людей, с которыми приходится взаимодействовать по жизни. Однако по стилю изложения, хоть в целом и вполне научно-популярному, все же книга, рассчитанная не только "для родителей", могла бы быть более сжатой и прагматичной. </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="overview-item">
-                                    <div class="overview-item__right-block">
-                                        <div class="overview-item-picture">
-                                            <img src="img/review-2.png" alt="">
-                                        </div>
-                                        <div class="name">
-                                            <h4 class="name-book">Big magic</h4>
-                                            <span class="author">Elizabeth Gilbert</span>
-                                        </div>
-                                    </div>
-                                    <div class="overview-item__left-block">
-                                        <div class="overview-item__user">
-                                            <img src="img/rewiev-2.jpg" alt="">
-                                            <h4 class="user-nane">Катерина Лебедева</h4>
-                                            <div class="stars">
-                                                <div class="ui star rating" data-rating="3">
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                    <i class="icon active"></i>
-                                                </div>
-                                            </div>
-                                            <div class="revier__text text">
-                                                <p>Середина романа — 29 глава — именно с неё стоит начинать, ведь она суть сотворение мира. И я даже подозреваю, что роман задумывался с неё — так ярок этот эпизод, когда главный герой лингвист и философ Адриа Ардевол-и-Боск получает в свое полное владение родительскую квартиру и наконец может распоряжаться и ей, и своей жизнью, как ему вздумается — вот он и создает свою Вселенную: расставляет бесчисленные книги на полках шкафов в разных комнатах.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="overviews__footer">
-                                <div class="reg-warning"><span>Для написания обзоров нужно зарегистрироваться</span></div>
-                                <button class="button">Регистрация</button>
-                                <button class="tr-button gray-but">Открыть все обзоры</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        <aside class="left-sidebar news">
-                            <h2 class="h2">Новости</h2>
-
-                            <div class="news__anouns">
-                                <time class="time">28 сентября 2016</time>
-                                <h3 class="h3">Анонс новых книг 2017 года</h3>
-                                <div class="announce-text">
-                                    <p>Все же интересно прочитать о себе, причем не в гороскопе или в результатах
-                                        сомнительного теста. Также полезно узнать объективную оценку характеров людей, с
-                                        которыми </p>
-                                </div>
-                            </div>
-
-                            <div class="news__anouns">
-                                <time class="time">28 сентября 2016</time>
-                                <h3 class="h3">Анонс новых книг 2017 года</h3>
-                                <div class="announce-text">
-                                    <p>Все же интересно прочитать о себе, причем не в гороскопе или в результатах
-                                        сомнительного теста. Также полезно узнать объективную оценку характеров людей, с
-                                        которыми </p>
-                                </div>
-                            </div>
-
-                            <div class="news__anouns">
-                                <time class="time">28 сентября 2016</time>
-                                <h3 class="h3">Анонс новых книг 2017 года</h3>
-                                <div class="announce-text">
-                                    <p>Все же интересно прочитать о себе, причем не в гороскопе или в результатах
-                                        сомнительного теста. Также полезно узнать объективную оценку характеров людей, с
-                                        которыми </p>
-                                </div>
-                            </div>
-
-                            <div class="news__anouns">
-                                <time class="time">28 сентября 2016</time>
-                                <h3 class="h3">Анонс новых книг 2017 года</h3>
-                                <div class="announce-text">
-                                    <p>Все же интересно прочитать о себе, причем не в гороскопе или в результатах
-                                        сомнительного теста. Также полезно узнать объективную оценку характеров людей, с
-                                        которыми </p>
-                                </div>
-                            </div>
-                            <div class="news-but-wrap">
-                                <button class="tr-button gray-but">Открыть все новости</button>
-                            </div>
-
-
-                        </aside>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="advances">
-            <div class="container">
-                <div class="avances__wrap">
-
-                    <div class="adv-item">
-                        <div class="adv-item-pic">
-                            <i class="icon icon-shape-1"></i>
-                        </div>
-                        <div class="adv-item-text">
-                            40000 книг в наличии
-                        </div>
-                    </div>
-
-                    <div class="adv-item">
-                        <div class="adv-item-pic">
-                            <i class="icon icon-shape-2"></i>
-                        </div>
-                        <div class="adv-item-text">
-                            Постоянные пополнения
-                        </div>
-                    </div>
-
-                    <div class="adv-item">
-                        <div class="adv-item-pic">
-                            <i class="icon icon-shape-3"></i>
-                        </div>
-                        <div class="adv-item-text">
-                            Безналичный расчет
-                        </div>
-                    </div>
-
-                    <div class="adv-item">
-                        <div class="adv-item-pic">
-                            <i class="icon icon-shape-4"></i>
-                        </div>
-                        <div class="adv-item-text">
-                            Доставка курьером
-                        </div>
-                    </div>
-
-                    <div class="adv-item">
-                        <div class="adv-item-pic">
-                            <i class="icon icon-shape-5"></i>
-                        </div>
-                        <div class="adv-item-text">
-                            Низкие цены
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
     <!-- END out-->
     <div id="signup" class="mfp-hide form-popup-outer form-popup">

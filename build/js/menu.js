@@ -85,7 +85,6 @@ function setHeighMobi() {
 
 setHeighMobi();
 
-$(window).resize(setHeighMobi);
 
 function resizeCatalog() {
     var headerHeight  = $('.header-top').outerHeight();
@@ -97,5 +96,8 @@ if($(window).width()<767) {
     resizeCatalog();
     $(window).resize(resizeCatalog);
 }
+
+
+jQuery(window).resize(setHeighMobi);
 
 

@@ -1,14 +1,25 @@
 //header
 
+.parallax-window
+  min-height: 450px
+  display: table
+  width: 100%
+
+.header-top.header-first
+  +r(1025)
+    background-color: rgba(22, 23, 24, 0.76)
 
 header.header
   //background-image: url(../img/main-header.jpg)
   +cover
   +clr
-  min-height: 480px
   +r(992)
     display: table
     width: 100%
+    
+.popup-open
+  .header-top.fixed
+    z-index: 400
 
 .header-top.fixed
   position: fixed
@@ -16,10 +27,7 @@ header.header
   left: 0
   right: 0
   top: 0
-  z-index: 500
-  +r(767)
-    position: absolute
-
+  z-index: 451
 
 .header-top
   padding: 15px 0
@@ -80,11 +88,9 @@ header.header
 #js-open-menu
   cursor: pointer
 
-.header-cat-outer
+.header-cat
   display: inline-block
   vertical-align: middle
-
-.header-cat
   border: 1px solid $main
   color: #fff
   +fs(14)
@@ -100,7 +106,7 @@ header.header
   opacity: 1
 
 
-.header-cat-outer:hover + .bg-fix
+.header-cat:hover + .bg-fix
   visibility: visible
   opacity: 1
 
@@ -109,6 +115,9 @@ header.header
   display: inline-block
   vertical-align: middle
   margin-right: 20px
+  img
+  +r(767)
+    height: 52px
   +r(360)
     margin-right: 0
   a
@@ -120,8 +129,6 @@ header.header
 
 .header__left-block
   float: left
-  +r(360)
-    width: 61%
 
 .menu-btn
   display: inline-block
@@ -130,7 +137,7 @@ header.header
   vertical-align: middle
   cursor: pointer
   position: absolute
-  top: 23px
+  top: 24px
   right: 21px
   //+rm(767)
   //  top: 50%
@@ -233,6 +240,7 @@ header.header
     line-height: 48px
     text-transform: uppercase
 
+
 .close-container
   position: absolute
   left: 108%
@@ -294,13 +302,14 @@ header.header
     font-weight: 700
     line-height: 35px
     text-transform: uppercase
+    +rh(480)
+      font-size: 11px
+      line-height: 20px
 
 .basket
   +r(1025)
     margin-right: 65px
-    margin-top: 3px
-  +r(360)
-    margin-top: 0
+    margin-top: 0px
 
   //+r(538)
   //  transform: scale(.8)
@@ -333,6 +342,11 @@ header.header
   +r(1025)
     padding: 3px 30px
 
+.search-form.invisible--unsign
+  display: none
+
+.header-top.scrolling .invisible--unsign
+  display: inline-block
 
 .search-form.open
   .search
@@ -415,6 +429,32 @@ header.header
   margin-left: 20px
   z-index: 50
 
+
+.search-block input::-webkit-input-placeholder
+  color: #c8c9c9
+  font-weight: 300 !important
+  +fs(24)
+  font-family: 'Open Sans'
+  +r(922)
+    font-size: 1rem
+
+.search-block input::-ms-input-placeholder
+  color: #c8c9c9
+  font-weight: 300 !important
+  +fs(24)
+  font-family: 'Open Sans'
+  +r(922)
+    font-size: 1rem
+
+.input-form::-moz-placeholder
+  color: #c8c9c9
+  font-weight: 300 !important
+  +fs(24)
+  font-family: 'Open Sans'
+  +r(922)
+    font-size: 1.2rem
+
+
 .search-block
   max-width: 730px
   margin: 0 auto
@@ -435,13 +475,6 @@ header.header
     font-weight: 300
     font-family: 'Open Sans'
     +fs(24)
-    &::placeholder
-      color: #c8c9c9
-      font-weight: 300 !important
-      +fs(24)
-      font-family: 'Open Sans'
-    +r(767)
-      font-size: 1rem
 
 .search-input.icon-search
   display: none
@@ -537,11 +570,12 @@ header.header
 
 .mobile-menu__body
   position: relative
+  overflow: hidden
 
 .scrollbar-mobi
   width: 6px !important
   top: 15px
-  height: 90%
+  height: calc(100% - 30px)
   border-radius: 5px
   display: none
   +rh(928)
@@ -713,7 +747,19 @@ header.header
   margin-bottom: 80px
   +vertical
   +r(800)
-    height: initial
+    height: auto
+  .h3
+    color: $title
+    font-size: 1rem
+    font-weight: 700
+    line-height: 20px
+    text-transform: uppercase
+    padding-bottom: 15px
+    +r(767)
+      margin: 0 auto
+  .button
+    padding: 9px 30px
+
 
   .text-wrap
     padding-left: 161px
@@ -772,6 +818,14 @@ header.header
   +r(992)
     padding-bottom: 6px
 
+
+.popular-item__author
+  padding-bottom: 15px
+
+.popular-item__price
+  padding-bottom: 14px
+
+
 .popular-item__price,
 .order__price,
 .interest__price,
@@ -826,12 +880,12 @@ header.header
   .slick-next
     right: -30px
     +r(922)
-      right: 10px
+      right: 0px
 
   .slick-prev
     left: -30px
     +r(922)
-      left: 10px
+      left: 0px
 
 .hit, .new, .discount
   +r(767)
@@ -1080,13 +1134,15 @@ header.header
   height: 7px
   display: inline-block
   position: absolute
-  top: 25px
+  top: 27px
   right: 20px
   margin-top: -7px
   font-style: normal
   font-weight: 400
   font-size: 14px
   line-height: 1
+  +r(767)
+    top: 22px
 
 .ui.dropdown .menu
   border-radius: 0 0 10px 10px !important
@@ -1434,7 +1490,7 @@ header.header
 
 .catalog-menu__list
   li
-    margin-bottom: 7px
+    padding-bottom: 7px
   a
     color: $title
     font-size: 0.875rem
@@ -1905,6 +1961,8 @@ input[type="checkbox"]:checked:before
 .accordion-criteries
   .accordion__item
     display: none
+  +r(1025)
+    padding-bottom: 60px
 
   .anchor-title
     position: relative
@@ -2054,6 +2112,10 @@ input[type="checkbox"]:checked:before
 
 .new-books
   padding-top: 40px
+  +r(1025)
+    padding-left: 20px
+  +r(922)
+    padding-left: 0
 
 .mask
   position: absolute
@@ -2070,6 +2132,7 @@ input[type="checkbox"]:checked:before
     left: 50%
     top: 55px
     transform: translateX(-50%)
+    display: block
 
 .news__item:hover .mask
   opacity: 1
@@ -2112,6 +2175,8 @@ input[type="checkbox"]:checked:before
   padding-bottom: 74px
   +r(922)
     text-align: center
+  +r(767)
+    padding-bottom: 20px
 
 .pagination li
   position: relative
@@ -2181,7 +2246,7 @@ input[type="checkbox"]:checked:before
 .card
   padding-bottom: 77px
   +r(767)
-    padding-bottom: 38px
+    padding-bottom: 0px
 
 .card-conainer
   position: relative
@@ -2250,10 +2315,10 @@ input[type="checkbox"]:checked:before
     padding-left: 0
 
   button
-    padding-top: 11px
+    padding-top: 9px
     padding-bottom: 11px
-    height: 40px
-    line-height: 18px
+    height: 45px
+    line-height: 23px
     +r(767)
       width: 230px
 
@@ -2309,6 +2374,8 @@ input[type="checkbox"]:checked:before
     height: 0.25rem
     background-color: $main
     border-radius: 0.188rem 0.188rem 0 0
+    +r(767)
+      top: calc(100% - 2px)
 
 .tab
   padding: 30px 0
@@ -2503,6 +2570,9 @@ input
 .mobile-menu__header
   padding: 25px
   border-bottom: 1px solid #717171
+  +rh(480)
+    padding-top: 10px
+    padding-bottom: 10px
 
 .nonitembased
   height: inherit !important
@@ -2514,6 +2584,9 @@ input
   right: 0
   padding: 25px
   border-top: 1px solid #717171
+  +rh(480)
+    padding-top: 10px
+    padding-bottom: 10px
   ul
     display: block
   li
@@ -2527,6 +2600,9 @@ input
   li
     a
       font-size: 12px
+      +rh(480)
+        line-height: 40px
+
 
   .header__menu
     //position: absolute
@@ -2561,7 +2637,10 @@ input
 
 
 .catalog-aside
+  +r(767)
+    margin-top: 0
   +r(1024)
+    margin-top: 80px
     position: fixed
     top: 0
     transform: translateX(-100%)
@@ -2583,7 +2662,7 @@ input
   border: 1px solid $main
   border-left: none
   top: 19%
-  +rm(992)
+  +rm(1025)
     display: none
   .icon
     font-size: 20px
@@ -2618,9 +2697,12 @@ textarea
 .promokod
   display: none
 
+
+
 .tooltips
   .tooltipster-base
-    z-index: 5000
+    //visibility: visible
+    z-index: 450
 
 .popup-header-logo
   border-radius: 4px 4px 0  0
@@ -2645,3 +2727,8 @@ textarea
   margin-bottom: 20px
 
 
+.mfp-bg
+  z-index: 448 !important
+
+.mfp-wrap
+  z-index: 448 !important

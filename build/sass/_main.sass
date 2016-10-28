@@ -23,6 +23,7 @@ header.header
 
 .header-top
   padding: 15px 0
+  position: relative
   +tr(all .3s)
   +r(1025)
     padding: 8px 0
@@ -42,36 +43,36 @@ header.header
   position: fixed
   left: 0
   right: 0
-  top: 0
   bottom: 0
-  z-index: 200
+  z-index: 10
   transition: all .2s
   visibility: hidden
   opacity: 0
+  top: 100px
 
-.header-menu-outside
-  padding-top: 40px
+.menu-open .bg-fix
+  visibility: visible
+  opacity: 1
 
 .reccomends-container
   display: flex
   justify-content: space-between
 
-.header-menu
-  box-shadow: 0 0.313rem 1.563rem rgba($title, 0.25)
+.header-menu-outside
   position: absolute
   left: 0
-  top: 100%
+  top: calc(100% - 28px)
   width: 100%
-  z-index: 9991
-  background: #f0f2f2
+  padding-top: 23px
   visibility: hidden
   opacity: 0
   transition: all .2s
-  //bottom: 0
-  //background: $bg
-  //overflow-y: auto
-  //overflow-x: hidden
+  z-index: 500
 
+
+.header-menu
+  box-shadow: 0 0.313rem 1.563rem rgba($title, 0.25)
+  background: #f0f2f2
 
 .icon-button-burger
   margin-right: 15px
@@ -79,9 +80,11 @@ header.header
 #js-open-menu
   cursor: pointer
 
-.header-cat
+.header-cat-outer
   display: inline-block
   vertical-align: middle
+
+.header-cat
   border: 1px solid $main
   color: #fff
   +fs(14)
@@ -92,12 +95,15 @@ header.header
   +r(1024)
     display: none
 
-  //+r(450)
-  //  margin-top: 15px
-  //  width: 137px
-  //  margin-right: 51px
-  //+r(534)
-  //  font-size: 11px
+.header-cat:hover .header-menu-outside
+  visibility: visible
+  opacity: 1
+
+
+.header-cat-outer:hover + .bg-fix
+  visibility: visible
+  opacity: 1
+
 
 .header-logo
   display: inline-block
