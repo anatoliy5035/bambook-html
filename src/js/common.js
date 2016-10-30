@@ -167,26 +167,20 @@ $(document).ready(function () {
       });
 
     var width = $(window).width();
-    if (width < 767) {
-      $('.order-form .cook_write').tooltipster({
-            trigger: 'custom',
-            onlyOne: false,
-            delay: 0,
-            position: 'bottom',
-            triggerOpen: {
-                touchstart: false,
-              },
-
-          });
-    } else {
-      $('.order-form .cook_write').tooltipster({
-            trigger: 'custom',
-            onlyOne: false,
-            delay: 0,
-            position: 'right',
-
-          });
-    }
+    // if (width < 767) {
+    $('.order-form input').tooltipster({
+        onlyOne: false,
+        delay: 0,
+        position: 'bottom',
+      });
+    // } else {
+    // $('.order-form input').tooltipster({
+    //       trigger: 'custom',
+    //       onlyOne: false,
+    //       delay: 0,
+    //       position: 'right',
+    //     });
+    // }
 
     if (width < 767) {
       $('.signup input').tooltipster({
@@ -235,11 +229,17 @@ $(document).ready(function () {
     $('.signup').validate({
         onsubmit: true,
         errorPlacement: function (error, element) {
-            $('body').addClass('tooltips');
-            $(element).parent('div').removeClass('sc');
-            $(element).tooltipster('update', $(error).text());
+          $('body').addClass('tooltips');
+          var lastError = $(element).data('lastError'),
+              newError = $(error).text();
+
+          $(element).data('lastError', newError);
+
+          if (newError !== '' && newError !== lastError) {
+            $(element).tooltipster('content', newError);
             $(element).tooltipster('show');
-          },
+          }
+        },
 
         success: function (label, element) {
             $('body').removeClass('tooltips');
@@ -265,11 +265,17 @@ $(document).ready(function () {
     $('.reg-form').validate({
         onsubmit: true,
         errorPlacement: function (error, element) {
-            $('body').addClass('tooltips');
-            $(element).parent('div').removeClass('sc');
-            $(element).tooltipster('update', $(error).text());
+          $('body').addClass('tooltips');
+          var lastError = $(element).data('lastError'),
+              newError = $(error).text();
+
+          $(element).data('lastError', newError);
+
+          if (newError !== '' && newError !== lastError) {
+            $(element).tooltipster('content', newError);
             $(element).tooltipster('show');
-          },
+          }
+        },
 
         success: function (label, element) {
             $('body').removeClass('tooltips');
@@ -298,18 +304,38 @@ $(document).ready(function () {
 
     $('.order-form').validate({
         onsubmit: true,
+
         errorPlacement: function (error, element) {
-            $('body').addClass('tooltips');
-            $(element).parent('div').removeClass('sc');
-            $(element).tooltipster('update', $(error).text());
+          $('body').addClass('tooltips');
+          var lastError = $(element).data('lastError'),
+              newError = $(error).text();
+
+          $(element).data('lastError', newError);
+
+          if (newError !== '' && newError !== lastError) {
+            $(element).tooltipster('content', newError);
             $(element).tooltipster('show');
-          },
+          }
+        },
 
         success: function (label, element) {
-            $('body').removeClass('tooltips');
-            $(element).tooltipster('hide');
-            $(element).parent('div').addClass('sc');
-          },
+          $(element).tooltipster('hide');
+        },
+
+        // errorPlacement: function (error, element) {
+        //     console.log($(error).text());
+        //     $('body').addClass('tooltips');
+        //     $(element).parent('div').removeClass('sc');
+        //     console.log(element);
+        //     // $(element).tooltipster('content', $(error).text());
+        //     // $(element).tooltipster('open');
+        //   },
+        //
+        // success: function (label, element) {
+        //     $('body').removeClass('tooltips');
+        //     // $(element).tooltipster('hide');
+        //     $(element).parent('div').addClass('sc');
+        //   },
 
         rules: {
             email: {
@@ -393,12 +419,12 @@ $('.anchor-title').click(function (e) {
 
 $(window).scroll(function () {
   if ($(window).width() > 767) {
-          var sticky = $('.header-top');
-          var scroll = $(window).scrollTop();
-          if (scroll >= 90) {
-              sticky.addClass('scrolling');
-          } else sticky.removeClass('scrolling');
-      };
+    var sticky = $('.header-top');
+    var scroll = $(window).scrollTop();
+    if (scroll >= 90) {
+      sticky.addClass('scrolling');
+    } else sticky.removeClass('scrolling');
+  };
 });
 
 $('.search').on('click', function (e) {
@@ -421,40 +447,40 @@ $('.tabular.menu .item').tab();
 
 if ($('#input-number-l').length && $('#input-number-h').length) {
 
-    var html5Slider = document.getElementById('range');
+  var html5Slider = document.getElementById('range');
 
-    noUiSlider.create(html5Slider, {
-        start: [25, 100],
-        connect: true,
-        range: {
-            min: 0,
-            max: 200,
+  noUiSlider.create(html5Slider, {
+      start: [25, 100],
+      connect: true,
+      range: {
+          min: 0,
+          max: 200,
         },
     });
 
-    var inputNumberl = document.getElementById('input-number-l');
-    var inputNumberh = document.getElementById('input-number-h');
+  var inputNumberl = document.getElementById('input-number-l');
+  var inputNumberh = document.getElementById('input-number-h');
 
-    html5Slider.noUiSlider.on('update', function (values, handle) {
+  html5Slider.noUiSlider.on('update', function (values, handle) {
 
-        var value = values[handle];
+      var value = values[handle];
 
-        if (handle) {
-            inputNumberl.value = value;
-        } else {
-            inputNumberh.value = value;
-        }
+      if (handle) {
+        inputNumberl.value = value;
+      } else {
+        inputNumberh.value = value;
+      }
     });
 
-    inputNumberl.addEventListener('change', function(){
-        html5Slider.noUiSlider.set([this.value, null]);
+  inputNumberl.addEventListener('change', function () {
+      html5Slider.noUiSlider.set([this.value, null]);
     });
 
-    inputNumberh.addEventListener('change', function(){
-        html5Slider.noUiSlider.set([null, this.value]);
+  inputNumberh.addEventListener('change', function () {
+      html5Slider.noUiSlider.set([null, this.value]);
     });
 }
 
 
 
-    /* scroll effect */
+/* scroll effect */
