@@ -104,13 +104,17 @@ $(document).ready(function () {
           dragHandle: 1,
           dynamicHandle: 1,
         });
+
+        $(window).resize(function(e) {
+            $frame.sly('reload');
+        });
     };
 
     if ($(window).width() < 769) {
-      $(window).on('orientationchange', function (event) {
-          slyMenu();
-        });
+        slyMenu();
+
     }
+
 
     //scroll slider
 
@@ -138,10 +142,17 @@ $(document).ready(function () {
           dragHandle: 1,
           dynamicHandle: false,
         });
+
+        $(window).resize(function(e) {
+            $frame.sly('reload');
+        });
     }
 
     initMainSly();
-    // $(window).resize(initMainSly);
+
+
+
+
 
     function getslideOffset() {
       if ($('.book-slider').length) {

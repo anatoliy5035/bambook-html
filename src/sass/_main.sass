@@ -1,3 +1,18 @@
+@font-face
+  font-family: "Open Sans"
+  src: url('../fonts/OpenSansLight.ttf')
+  font-weight: 500
+
+@font-face
+  font-family: "Open Sans"
+  src: url('../fonts/OpenSansRegular.ttf')
+  font-weight: 400
+
+@font-face
+  font-family: "Open Sans"
+  src: url('../fonts/OpenSansBold.ttf')
+  font-weight: 700
+
 //header
 
 .parallax-window
@@ -125,10 +140,14 @@ header.header
   img
     +r(538)
       width: 80%
+    +r(320)
+      width: 100%
 
 
 .header__left-block
   float: left
+  +r(360)
+    width: 60%
 
 .menu-btn
   display: inline-block
@@ -137,11 +156,9 @@ header.header
   vertical-align: middle
   cursor: pointer
   position: absolute
-  top: 24px
   right: 21px
-  //+rm(767)
-  //  top: 50%
-  //  transform: translateY(-50%)
+  top: 50%
+  transform: translateY(-50%)
 
 .mobile-nav-bt
   float: right
@@ -177,7 +194,7 @@ header.header
 .header__right-block
   float: right
   margin-top: 11px
-  +r(1025)
+  +r(767)
     margin-top: 6px
 
 .header__right-block .header__menu
@@ -1980,9 +1997,14 @@ input[type="checkbox"]:checked:before
       height: 7px
       position: absolute
       top: 7px
+      background-repeat: no-repeat
       left: -16px
       transform: rotate(-90deg)
       background-image: url('../img/drop.svg')
+      +r(480)
+        top: 5px
+        left: -10px
+
 
 .cat-check
   padding-bottom: 25px
@@ -2635,6 +2657,9 @@ input
   background-repeat: no-repeat
   background-image: url(../img/pl.svg)
 
+.catalog-aside .catalog__inside
+  +r(360)
+    padding: 15px
 
 .catalog-aside
   +r(767)
@@ -2702,7 +2727,7 @@ textarea
 .tooltips
   .tooltipster-base
     //visibility: visible
-    z-index: 450
+    z-index: 450 !important
 
 .popup-header-logo
   border-radius: 4px 4px 0  0
