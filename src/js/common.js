@@ -27,31 +27,67 @@ if ($(window).width() < 800) {
 
 
 //columns equall height
-function setEqualHeight(columns)
+function setEqualHeight(columns) {
+    if ($(window).width() > 1025) {
+        var tallestcolumn = 0;
+        columns.each(
+            function () {
 
-{
-  var tallestcolumn = 0;
-  columns.each(
-      function ()
-      {
-          var currentHeight = $(this).height();
-          if (currentHeight > tallestcolumn)
-          {
-            tallestcolumn = currentHeight;
-          }
-        }
-  );
-  columns.height(tallestcolumn);
-}
-
-if ($(window).width() > 923) {
-  setEqualHeight($('.catalog .row'));
+                var currentHeight = $(this).height();
+                if (currentHeight > tallestcolumn) {
+                    tallestcolumn = currentHeight;
+                }
+            }
+        );
+        columns.height(tallestcolumn);
+    }
 }
 
 
-/*!mobile*/
+setEqualHeight($('.catalog .row'));
+
+$(window).resize(function (e) {
+    setEqualHeight($('.catalog .row'));
+})
+
 
 $(document).ready(function () {
+
+    var showChar = 700;
+    var ellipsestext = "...";
+    var moretext = "Читать Далее";
+    var lesstext = "Скрыть";
+    $('.body-review').each(function() {
+        var content = $(this).html();
+
+        if(content.length > showChar) {
+
+            var c = content.substr(0, showChar);
+            var h = content.substr(showChar-1, content.length - showChar);
+
+            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+            $(this).html(html);
+        }
+
+    });
+
+    $('.all-img-link').on('click', function(){
+        $('.thumb').trigger('click');
+    });
+
+    $(".morelink").click(function(){
+        if($(this).hasClass("less")) {
+            $(this).removeClass("less");
+            $(this).html(moretext);
+        } else {
+            $(this).addClass("less");
+            $(this).html(lesstext);
+        }
+        $(this).parents('.body-review').find('.morecontent span').toggle();
+        $(this).parents('.body-review').find('.moreellipses').toggle();
+        return false;
+    });
 
     //typed
     $(function () {
@@ -164,6 +200,7 @@ $(document).ready(function () {
     }
 
     getslideOffset();
+
 
     $(window).resize(getslideOffset);
 
@@ -422,7 +459,6 @@ if ($(window).width() < 767) {
   $('.frame .col-inline-4').width(winWidth);
 
 }
-
 
 //dropdown
 $('.ui.dropdown').dropdown();

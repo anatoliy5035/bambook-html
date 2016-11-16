@@ -1,5 +1,6 @@
 'use strict';
 
+
 var MobileMenu = {
     show : function( element ) {
         element.addClass('x close active');
