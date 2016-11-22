@@ -9,9 +9,10 @@
 	<link rel="stylesheet" media="all" href="css/style.css" >
 </head>
 <body>
-
+<!-- Оберертка для страницы-->
 <div class="wrapper">
 	//=include partials/header-one.html
+    <!--паралакс и поиск -->
     <section class="header parallax-window" data-bleed="10" data-parallax="scroll" data-image-src="img/main-header.jpg">
         <div class="header__search">
             <h2 class="h2">Какую книгу вы ищите?</h2>
@@ -22,8 +23,9 @@
             </div>
         </div>
     </section>
-	<!-- BEGIN  out-->
+
 	<main>
+        <!-- главный слайдер-->
 		<section class="book-slider-container">
 			<!--<div class="container">-->
 				<div class="book-slider">
@@ -81,6 +83,7 @@
 				</div>
 			<!--</div>-->
 		</section>
+        <!-- Плитки категорий-->
         <section class="manu-picture-container">
             <div class="container">
                 <div class="row-inline">
@@ -138,6 +141,7 @@
                 </div>
             </div>
         </section>
+        <!--Слайдер популярных книг -->
         <section class="popular-books">
             <div class="container">
                 <h2 class="h2">Популярные книги</h2>
@@ -332,8 +336,7 @@
                 </div>
             </div>
         </section>
-
-
+        <!--Отзывы пользователей -->
         <section class="reviews">
         <h2 class="h2">
             Отзывы о магазине
@@ -607,6 +610,7 @@
         </div>
 
     </section>
+        <!--Блок регистрации -->
         <section class="registration-block">
             <div class="continer">
                 <div class="registration-block__info">
@@ -618,10 +622,12 @@
                 </div>
             </div>
         </section>
+
         <section class="iformation-section">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-sm-8 col-xs-12">
+                        <!--Обзоры -->
                         <div class="overviews">
                             <div class="overviews__header">
                                 <h2 class="h2">Обзоры</h2>
@@ -716,6 +722,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12">
+                        <!-- Новости-->
                         <aside class="left-sidebar news">
                             <h2 class="h2">Новости</h2>
 
@@ -776,6 +783,7 @@
                 </div>
             </div>
         </section>
+        <!--Преимущества -->
         <section class="advances">
             <div class="container">
                 <div class="avances__wrap">
@@ -829,7 +837,7 @@
             </div>
         </section>
 	</main>
-	<!-- END out-->
+
     //=include partials/foooter.html
 </div>
 //=include partials/scripts.html
